@@ -1,7 +1,6 @@
 ---
 origin: /
 title: Feed
-description: D-Blok Studios RSS Feed
 ---
 
 <?xml version='1.0' encoding='utf-8' ?>
@@ -9,7 +8,7 @@ description: D-Blok Studios RSS Feed
 <channel>
   <title>{{page.title}}</title>
   <link>{{site.url}}</link>
-  <description>{{page.description}}</description>
+  <description>{{site.description}}</description>
   <language>en</language>
   
   {% for cat in site.categories %}
