@@ -8,7 +8,7 @@ pygments:  true
 permalink: /:categories/:title
 charset:   utf-8
 baseurl:   /
-url:       
+url:       http://localhost:4000
 
 # Specific stuff
 version:      0.0.1
@@ -16,19 +16,19 @@ date:         0000-00-00
 language:     en-GB
 license:      v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
-name:         
-name_short:   
-tagline:      
-color:        
-email:        
-copyright:    
+name:         D-Blok Studios
+name_short:   dblokstudios
+tagline:      "We Make Beats. We Throw Parties. You Get Down"
+color:        #000
+email:        gregdaynes@gmail.com
+copyright:    ©2013 D-Blok Studios. All rights reserved
 google:       UA-XXXXXXXX-X
-creator:      
-publisher:    
+creator:      http://twitter.com/gregdaynes
+publisher:    Gregory Daynes
 keywords:     
 description:  
-twitter:      
-twitter_card: 
+twitter:      dblokstudios
+twitter_card: summary
 
 ### page details
 # title

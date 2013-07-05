@@ -1,0 +1,18 @@
+callback([
+
+  {
+    "text": "About",
+    "href": "//about"
+  } ,
+
+  {
+    "text": "Artists",
+    "href": "//artists"
+  } ,
+
+  {
+    "text": "Events",
+    "href": "//events"
+  } 
+
+])
