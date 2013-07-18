@@ -13,12 +13,16 @@ layout: default
 </ul>
 
 <ul>
+  {% if page.facebook %}
   <li>
     <a href="http://facebook.com/{{ page.facebook }}">Facebook</a>
   </li>
+  {% endif %}
+  {% if page.twitter %}
   <li>
     <a href="http://twitter.com/{{ page.twitter }}">Twitter</a>
   </li>
+  {% endif %}
 </ul>
 
 {{ content }}

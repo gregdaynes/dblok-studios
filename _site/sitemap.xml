@@ -10,7 +10,35 @@
     </url>
     
     <url>
+        <loc>http://localhost:4000/artists/heavy-send</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/artists/empire</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/artists/dui</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/artists/drute-z</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/artists/dj-flailz</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/artists/critical</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/artists/c-majah</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/artists/ben-chemikcal</loc>
     </url>
     
     <url>
@@ -29,13 +57,9 @@
     
     
     
-    
-    
     <url>
         <loc>http://localhost:4000/</loc>
     </url>
-    
-    
     
     
     

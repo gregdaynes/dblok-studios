@@ -3,7 +3,9 @@ layout: default
 ---
 
 {% for artist in site.categories.artists %}
-
-  <li>{% include partials/artists.artist.html %}</li>
-
+  {% if artist.role == 'artist' or artist.role == 'employee' or artist.role == 'boss' %}
+     
+    <li>{% include partials/artists.artist.html %}</li>
+  
+  {% endif %}
 {% endfor %}
