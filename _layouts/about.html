@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<ul>
+{% for person in site.posts %}
+  {% if person.role == 'boss' %}
+  
+    <li>{% include partials/about.person.html %}</li>
+  
+  {% endif %}
+{% endfor %}
+</ul>    
+
+<hr />
+
+<ul>
+  {% for person in site.posts %}
+    {% if person.role == 'staff' %}
+      
+      <li>{% include partials/about.person.html %}</li>
+      
+    {% endif %}
+  {% endfor %}
+</ul>

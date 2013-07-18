@@ -1,0 +1,8 @@
+<ul>
+{% for bandcamp in page.bandcamp %}
+  <li>
+    <iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album={{ bandcamp.id }}/size=medium/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="http://{{ bandcamp.url }}.bandcamp.com/album/{{ bandcamp.release }}"></a></iframe>
+  </li>
+{% endfor %}
+</ul>
+

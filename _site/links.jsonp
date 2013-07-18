@@ -11,8 +11,23 @@ callback([
   } ,
 
   {
-    "text": "Events",
-    "href": "//events"
+    "text": "Beat Junky",
+    "href": "//artists/beat-junky"
+  } ,
+
+  {
+    "text": "Drute-z",
+    "href": "//artists/drute-z"
+  } ,
+
+  {
+    "text": "Industrial",
+    "href": "//artists/industrial"
+  } ,
+
+  {
+    "text": "Jamie",
+    "href": "//people/james-gibson"
   } 
 
 ])

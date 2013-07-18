@@ -1,0 +1,17 @@
+<a href="{{artist.url}}">
+  <div>
+    
+    <h3>
+      {{ artist.title }}
+    </h3>
+    
+    {{ artist.location }}
+    
+    <ul>
+      {% for genre in artist.genres limit:3 %}
+      <li>{{ genre }}</li>
+      {% endfor %}
+    </ul>
+    
+  </div>
+</a>

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<h3>{{ page.title }}</h3>
+
+{{ page.location }}
+
+<ul>
+  {% for genre in page.genres %}
+    <li>{{ genre }}</li>
+  {% endfor %}
+</ul>
+
+<ul>
+  <li>
+    <a href="http://facebook.com/{{ page.facebook }}">Facebook</a>
+  </li>
+  <li>
+    <a href="http://twitter.com/{{ page.twitter }}">Twitter</a>
+  </li>
+</ul>
+
+{{ content }}
+
+{% if page.bandcamp %}
+  {% include partials/artist.release.html %}
+{% endif %}
+
+{% if page.mixcloud %}
+  {% include partials/artist.mixcloud.html %}
+{% endif %}
+
+{% if page.soundcloud %}
+  {% include partials/artist.soundcloud.html %}
+{% endif %}
+
+{% include partials/artist.set.html %}

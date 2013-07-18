@@ -3,5 +3,7 @@ layout: default
 ---
 
 {% for artist in site.categories.artists %}
-  {{ artist.title }}
+
+  <li>{% include partials/artists.artist.html %}</li>
+
 {% endfor %}
