@@ -206,6 +206,31 @@
 	}
 }
 
+/**
+ * aspect-ratio
+ *
+ * create block elements that follow ratio
+ *
+ * @include aspect-ratio(16/9, article)
+ */
+@mixin aspect-ratio($ratio, $content-class) {
+  position: relative;
+  // width: 50% // provided by normal css
+  
+  &:before {
+    content: "";
+    display: block;
+    padding-top: ($ratio) * 100%;
+  }
+  
+  .#{$content-class} {
+  	position:  absolute;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  }
+}
 
 /**
  * Clearfix
