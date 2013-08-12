@@ -2,10 +2,16 @@
 layout: default
 ---
 
-{% for artist in site.categories.artists %}
-  {% if artist.role == 'artist' or artist.role == 'employee' or artist.role == 'boss' %}
-     
-    <li>{% include partials/artists.artist.html %}</li>
-  
-  {% endif %}
-{% endfor %}
+{% assign sorted_artists = site.categories.artist | sort:"name" %}
+
+<h2>D-Blok Artists</h2>
+
+<ul class="artists">
+  {% for person in sorted_artists %}{% if person.role == 'artist' or person.role == 'executive' or person.role == 'staff-member' %}<li class="artists__artist">{% include partials/person--short.html %}</li>{% endif %}{% endfor %}
+</ul>
+
+<h2>Friends of D-Blok Studios</h2>
+
+<ul class="friends">
+  {% for person in sorted_artists %}{% if person.role == 'friend' %}<li class="friends__friend">{% include partials/person--short.html %}</li>{% endif %}{% endfor %}
+</ul>

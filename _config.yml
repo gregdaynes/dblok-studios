@@ -3,6 +3,7 @@ markdown:  rdiscount
 safe:      true
 lsi:       false
 pygments:  true
+exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 
 # Site stuff
 permalink: /:categories/:title
@@ -12,16 +13,18 @@ url:       http://localhost:4000
 
 # Specific stuff
 version:      0.0.1
-date:         0000-00-00
+date:         2013-08-09
 language:     en-GB
-license:      v2.0. http://www.apache.org/licenses/LICENSE-2.0
+license:      Apache License v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 name:         D-Blok Studios
 name_short:   dblokstudios
 tagline:      "We Make Beats. We Throw Parties. You Get Down"
 color:        #000
 email:        gregdaynes@gmail.com
-copyright:    ©2013 D-Blok Studios. All rights reserved
+# Copyright: company or name to copyright year is generated from date above.
+
+copyright:    D-Blok Studios. All rights reserved
 google:       UA-30347152-1
 creator:      http://twitter.com/gregdaynes
 publisher:    Gregory Daynes
@@ -30,11 +33,5 @@ description:
 twitter:      dblokstudios
 twitter_card: summary
 
-### page details
-# title
-# description
-# keywords
-# graph_image
-# graph_image_type
-# graph_image_width
-# graph_image_height
+
+title-delimiter: ' • '

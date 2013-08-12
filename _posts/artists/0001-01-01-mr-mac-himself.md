@@ -5,7 +5,7 @@ last-name: MacMillan
 location: Victoria, BC
 role: artist
 
-category: artists
+category: artist
 layout: artist
 
 genres:

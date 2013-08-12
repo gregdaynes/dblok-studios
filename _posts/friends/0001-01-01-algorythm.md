@@ -5,7 +5,7 @@ title: Algorythm
 "last-name": null
 location: Victoria, BC
 role: friend
-category: artists
+category: artist
 layout: artist
 genres: 
   - Drum & Bass

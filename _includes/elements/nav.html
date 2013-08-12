@@ -1,8 +1,9 @@
-<nav id="nav" class="nav">
-  <h2>Navigation</h2>
-  <ul>
-    <li><a class="{% if page.title == "Home" %}active{% endif %}" href="/">Home</a></li>
-    <li><a class="{% if page.title == "About" %}active{% endif %}" href="/about">About</a></li>
-    <li><a class="{% if page.title == "Artists" %}active{% endif %}" href="/artists">Artists</a></li>
+<nav class="nav main-site-nav">
+  <h2 class="main-site-nav__header">Navigation</h2>
+  
+  <ul class="main-site-nav__list">
+    <li class="main-site-nav__item"><a class="{% if page.title == "Home" %}active{% endif %}" href="/">Home</a></li>
+    <li class="main-site-nav__item"><a class="{% if page.title == "About" %}active{% endif %}" href="/about">About</a></li>
+    <li class="main-site-nav__item"><a class="{% if page.title == "Artists" %}active{% endif %}" href="/artists">Artists</a></li>
   </ul>
 </nav>

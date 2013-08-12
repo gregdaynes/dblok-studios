@@ -5,7 +5,7 @@ title: Buck Lee & Lady AK
 "last-name": null
 location: Nelson, BC
 role: friend
-category: artists
+category: artist
 layout: artist
 genres: 
   - Drum & Bass

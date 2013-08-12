@@ -3,14 +3,14 @@ published: true
 title: Royal Tease
 "first-name": null
 "last-name": null
-location: "Duncan, BC"
+location: Duncan, BC
 role: artist
-category: artists
+category: artist
 layout: artist
 genres: 
   - Dubstep
   - Electro-House
-mixcloud: "dblok-royal_tease"
+mixcloud: dblok-royal_tease
 bandcamp: null
 soundcloud: null
 facebook: null

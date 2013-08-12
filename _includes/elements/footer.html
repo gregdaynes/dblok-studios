@@ -1,7 +1,8 @@
-<footer id="footer">
-  <h2>Footer</h2>
-  {{site.copyright}}
+<footer class="footer">
+  <p class="site-copyright">{% include fragment/html-copyright.html %}</p>
   
-  <a href="/terms">Terms of Service</a>
-  <a href="/privacy">Privacy Policy</a>
+  <ul class="nav copyright-menu">
+    <li class="copyright-menu__item"><a class="{% if page.title == "Privacy Policy" %}active{% endif %}" href="/">Privacy Policy</a></li>
+    <li class="copyright-menu__item"><a class="{% if page.title == "Terms of Service" %}active{% endif %}" href="/about">Terms of Service</a></li>
+  </ul>
 </footer>

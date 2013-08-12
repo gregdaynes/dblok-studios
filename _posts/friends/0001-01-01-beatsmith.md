@@ -5,7 +5,7 @@ title: Beatsmith
 "last-name": null
 location: Victoria, Bc
 role: friend
-category: artists
+category: artist
 layout: artist
 genres: 
   - Drum & Bass

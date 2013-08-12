@@ -3,10 +3,11 @@ title: Industrial
 first-name: Gregory
 last-name: Daynes
 location: Duncan, BC
-role: boss
+
+category: artist
+role: executive
 position: CTO/Chief Technical Officer
 
-category: artists
 layout: artist
 
 genres:

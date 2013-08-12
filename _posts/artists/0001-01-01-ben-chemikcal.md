@@ -5,7 +5,7 @@ last-name: Hodding
 location: Duncan, BC
 role: artist
 
-category: artists
+category: artist
 layout: artist
 
 genres:

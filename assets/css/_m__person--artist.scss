@@ -1,0 +1,20 @@
+// Artist-Specific
+// ---------------
+.artist-genres { // list
+  @extend %list-style-none;
+  @include font-size(14);
+}
+
+.artist-genres__genre { // individual
+  display: inline-block;
+  text-transform: lowercase;
+  color: $fadedtextcolor;
+  
+  &:after {
+    content: ' • ';
+  }
+  
+  &:last-of-type:after {
+    content: '';
+  }
+}

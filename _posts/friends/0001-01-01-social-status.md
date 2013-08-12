@@ -5,7 +5,7 @@ title: Social Status
 "last-name": null
 location: Nanaimo, BC
 role: friend
-category: artists
+category: artist
 layout: artist
 genres: 
 mixcloud: null

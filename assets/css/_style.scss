@@ -1,28 +1,32 @@
-// IMPORTS
-
-@import "variables";
-@import "_vendor/normalize";
-@import "_vendor/bourbon/bourbon";
-@import "_vendor/neat/neat";
-@import "mixins";
-
-// SMACSS
-@import "base";
-@import "layout";
-@import "module";
-@import "state";
-
-// 
-// Template
-// Created By: 
-// -----------------------------------------------------------------------------
+/*! ------------------------------------------------------------------------ !*\
+    Created By: Gregory Daynes
+    
+    based on BEM/SMACSS principals
+    
+    mixins    some taken from Malarky/Rock Hammer, H5BP
+    base      H5BP, Malarky/Rock Hammer, Around the Web
+    normalize v2.1.2 | MIT License | git.io/normalize
+    grids   https://github.com/csswizardry/csswizardry-grids
+\*! ------------------------------------------------------------------------ !*/
 
 
+// Tools
+// -----
+@import "_functions";
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+@import "_grid";
+@import "_normalize";
 
+// Styles
+// ------
+@import "1-base";
+@import "2-general";
+@import "3-layout";
+@import "4-modules";
+@import "5-pages";
+@import "6-theme";
+@import "7-print";
 
-
-// -----------------------------------------------------------------------------
-// End of template
-//
-
-@import "print";
+@include bp-helper;

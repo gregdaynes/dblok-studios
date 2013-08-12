@@ -4,24 +4,10 @@ layout: default
 
 {{ content }}
 
-<ul>
-{% for person in site.posts %}
-  {% if person.role == 'boss' %}
-  
-    <li>{% include partials/about.person.html %}</li>
-  
-  {% endif %}
-{% endfor %}
+<ul class="executives">
+{% for person in site.posts %}{% if person.role == 'executive' %}<li class="executives__executive">{% include partials/person--short.html %}</li>{% endif %}{% endfor %}
 </ul>    
 
-<hr />
-
-<ul>
-  {% for person in site.posts %}
-    {% if person.role == 'staff' %}
-      
-      <li>{% include partials/about.person.html %}</li>
-      
-    {% endif %}
-  {% endfor %}
+<ul class="staff">
+{% for person in site.posts %}{% if person.role == 'staff' %}<li class="staff__staff-member">{% include partials/person--short.html %}</li>{% endif %}{% endfor %}
 </ul>

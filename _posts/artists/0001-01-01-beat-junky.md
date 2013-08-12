@@ -3,9 +3,9 @@ title: Beat Junky
 first-name: Nick
 last-name: Kinsella
 location: Duncan, BC
+category: artist
 role: artist
 
-category: artists
 layout: artist
 
 genres:

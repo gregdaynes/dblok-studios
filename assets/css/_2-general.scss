@@ -1,0 +1,17 @@
+/*--------------------*\
+  General
+\*--------------------*/
+
+body {
+  padding: 0 20px;
+  background-color: $darkneutralcolor;
+  color: $lightestneutralcolor;
+}
+
+a {
+  text-decoration: none;
+  color: $linkcolor;
+  
+  &:visited { color: $linkcolorvisited; }
+  &:hover, &:focus { color: $linkcolorhover; }
+}

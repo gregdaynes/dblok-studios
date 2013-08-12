@@ -1,0 +1,58 @@
+/*--------------------*\
+  navigation
+\*--------------------*/
+.nav {
+  @extend %list-style-none;
+}
+
+/*--------------------*\
+  Main Site Navigation
+\*--------------------*/
+.main-site-nav {
+  padding: 20px;
+  margin: 0 -20px;
+  background-color: $midneutralcolor;
+  border-bottom: 1px solid lighten($midneutralcolor, 5%);
+  
+  .main-site-nav__header {
+    @extend %hide-screen;
+  }
+  
+  .main-site-nav__list {
+    @extend %list-style-none;
+    text-align:  right;
+    
+    .main-site-nav__item {
+      display: inline-block;
+      
+      a {
+        color: $lightestneutralcolor;
+        padding: 0 20px; 
+      
+        &:last-of-type {
+          padding-right: 0;
+        }
+        
+        &.active {
+          color: $lightneutralcolor;
+        }
+      }
+    }
+  }
+}
+
+/*--------------------*\
+  Copyright Menu
+\*--------------------*/
+.copyright-menu {
+  text-align: center;
+  
+  .copyright-menu__item {
+    display: inline-block;
+
+    a {
+      color: $midneutralcolor;
+      @include font-size(12);
+    }
+  }
+}

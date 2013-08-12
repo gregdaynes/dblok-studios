@@ -3,10 +3,10 @@ title: Jamie
 first-name: James
 last-name: Gibson
 location: Victoria, BC
-category: people
 
-role: boss
-position: Promotions
+category: person
+role: executive
+position: promotions
 
 layout: artist
 ---

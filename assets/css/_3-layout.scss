@@ -1,0 +1,85 @@
+// Header
+// ------
+.header {
+  @extend %box-sizing;
+  margin: 0 -20px;
+}
+
+
+
+
+
+// Footer
+// ------
+.footer {
+  @extend %box-sizing;
+  margin: 20px -20px;
+  padding: 20px 0;
+}
+
+
+
+
+
+// Executives
+// ------
+.executives { // list
+  @extend %grid;
+}
+
+.executives__executive { // individual
+  @extend %grid__item;
+  @extend %bp3--third;
+}
+
+.executives__executive .artist-genres {
+  @extend %hide-screen;
+}
+
+
+
+// Staff
+// -----
+.staff { // list
+  @extend %grid;
+}
+
+.staff__staff-member { // individual
+  @extend %grid__item;
+  @extend %bp3--third;
+  @extend %bp4--quarter;
+}
+
+
+
+
+
+// Artists
+// ------
+.artists { // list
+  @extend %grid;
+}
+
+.artists__artist { // individual
+  @extend %grid__item;
+  @extend %bp2--half;
+  @extend %bp3--third;
+  @extend %bp5--quarter;
+}
+
+
+
+
+
+// Friends
+// -------
+.friends { // list
+  @extend %grid;
+}
+
+.friends__friend { // individual
+  @extend %grid__item;
+  @extend %bp2--half;
+  @extend %bp3--third;
+  @extend %bp5--quarter;
+}

@@ -5,7 +5,7 @@ title: Handyside
 "last-name": null
 location: Victoria, BC
 role: friend
-category: artists
+category: artist
 layout: artist
 genres: 
   - Jungle

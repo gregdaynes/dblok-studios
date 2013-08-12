@@ -5,7 +5,7 @@ title: Groove Troopers
 "last-name": null
 location: Duncan, BC
 role: friend
-category: artists
+category: artist
 layout: artist
 genres: 
   - Breaks

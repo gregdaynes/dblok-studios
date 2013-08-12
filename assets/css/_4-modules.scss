@@ -1,0 +1,28 @@
+@import "m__person";
+@import "m__navigation";
+@import "m__person--artist";
+
+/*--------------------*\
+  site-logo
+\*--------------------*/
+.site-logo {
+  height: 200px;
+  
+  h1, em {
+    @extend %zero;
+    //@extend %hide-screen;
+  }
+} /**/
+
+/*--------------------*\
+  site-copyright
+\*--------------------*/
+.site-copyright {
+  @extend %zero;
+  text-align: center;
+  color: $midneutralcolor;
+  @include font-size(14);
+}
+
+
+
