@@ -9,12 +9,11 @@
   display: inline-block;
   text-transform: lowercase;
   color: $fadedtextcolor;
+  background-color: lighten($tagscolor, 20%);
+  border: 1px solid $tagscolor;
+  padding: 2px 5px;
+  margin-bottom: $vertical-gutter / 4;
+  border-radius: 5px;
+  @include font-size(12);
 
-  &:after {
-    content: ' • ';
-  }
-
-  &:last-of-type:after {
-    content: '';
-  }
 }

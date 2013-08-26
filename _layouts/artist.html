@@ -7,9 +7,11 @@ body-class: artist-page
 
 {{ page.location }}
 
-<ul>
+<ul class="artist-genres">
   {% for genre in page.genres %}
-    <li>{{ genre }}</li>
+    <li class="artist-genres__genre">
+      <a href="/tags/{{ genre }}">{{ genre }}</a>
+    </li>
   {% endfor %}
 </ul>
 

@@ -1,23 +1,23 @@
 module.exports = function(grunt) {
-  
+
   // load the plugins that provides the tasks.
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');  
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  
+
   // initial task(s)
   grunt.registerTask('default', [
     'shell:jekyll__dev',
     'shell:jekyll__live',
-    'build-css',    
+    'build-css',
     'watch'
   ]);
-  
+
   // sass changes
   grunt.registerTask('build-css', [
     'sass:dev',
@@ -25,46 +25,46 @@ module.exports = function(grunt) {
     'copy:css',
     'cssmin',
   ]);
-  
+
   // js changes
   grunt.registerTask('build-js', [
     'uglify',
     'copy:js',
   ]);
-  
-  
+
+
   // project configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    
+
     /**
      * Watch
      * watch for changes inside project
      */
     watch: {
-      
+
       sass: {
         files: ['assets/css/**/*.scss'],
         tasks: 'build-css',
-      }, 
-      
+      },
+
       livereload: {
         options: {
           livereload: true
         },
         files: ['__dev/assets/css/**/*.*'],
       },
-      
+
       javascript: {
         files: ['assets/js/**/*.js'],
         tasks: 'build-js'
       },
-      
+
       jekyll: {
         files: [
-          '*.html', 
-          '*.yml', 
-          '_posts/**', 
+          '*.html',
+          '*.yml',
+          '_posts/**',
           '_includes/**',
           '_layouts/**',
           '*.md',
@@ -76,29 +76,29 @@ module.exports = function(grunt) {
         ]
       }
     },
-    
+
     shell: {
       jekyll__dev: {
         command: 'rm -rf __dev/*; jekyll build --d __dev',
         stdout: true
       },
-      
+
       jekyll__live: {
         command: 'rm -rf __live; cp -R __dev __live',
         stdout: true
       },
     },
-    
+
     uglify: {
       live: {
         expand: true,
         cwd: 'assets/js/',
         src: '**/*.js',
         dest: '__live/assets/js/',
-        ext: '.js', 
+        ext: '.js',
       }
     },
-    
+
     sass: {
       dev: {
         files: {
@@ -106,20 +106,20 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     autoprefixer: {
       dev: {
         files: {
           'assets/css/style.css': 'assets/css/style.css'
         }
       }
-      
+
     },
-    
+
     cssmin: {
       minify: {
         files: {
-          '__live/assets/css/style.css': 'assets/css/style.css' 
+          'assets/css/style.css': 'assets/css/style.css'
         }
       }
     },
@@ -130,7 +130,7 @@ module.exports = function(grunt) {
            '__dev/assets/css/style.css':'assets/css/style.css',
         }
       },
-      
+
       js: {
           expand: true,
           cwd: 'assets/js/',
@@ -138,8 +138,8 @@ module.exports = function(grunt) {
           dest: '__dev/assets/js/',
           ext: '.js'
       },
-    }, 
-    
+    },
+
     htmlmin: {                                     // Task
       live: {                                      // Target
         options: {                                 // Target options
@@ -156,6 +156,6 @@ module.exports = function(grunt) {
         ],
       },
     },
-    
+
   });
 }
