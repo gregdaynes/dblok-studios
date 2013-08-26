@@ -1,0 +1,44 @@
+.tag-list {
+  @extend %list-style-none;
+/*   @extend %grid; */
+}
+
+.tag-list__tag {
+  display: inline-block;
+  text-align: center;
+  margin-top: $vertical-gutter / 2;
+
+  a {
+    border: 1px solid $tagscolor;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin: 0 $horizontal-gutter / 4;
+    background-color: lighten($tagscolor, 20%);
+    @include font-size(12);
+    @extend %transition;
+    text-transform: capitalize;
+
+    &:hover {
+      background-color: lighten(#f39c12, 20%);
+      border-color: #f39c12;
+    }
+  }
+}
+
+.tagged-posts {
+  @extend %list-style-none;
+}
+
+.tagged-posts__post {
+
+}
+
+
+.tagged-posts__post__title {
+
+}
+
+.tagged-posts__post__summary {
+
+}
+

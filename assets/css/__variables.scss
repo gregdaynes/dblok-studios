@@ -1,6 +1,7 @@
 /*--------------------*\
   Breakpoints
 \*--------------------*/
+$bp1: em(478px);
 $bp2: em(480px);
 $bp3: em(600px);
 $bp4: em(768px);
@@ -10,8 +11,8 @@ $bp6: em(1382px);
 /*--------------------*\
   Grid
 \*--------------------*/
-$gutter:                24px!default;
-
+$horizontal-gutter: 24px!default;
+$vertical-gutter:   24px!default;
 /*--------------------*\
   Nav options
 \*--------------------*/
@@ -22,21 +23,17 @@ $transitionSpeed: .3s;
 /*--------------------*\
   Colors
 \*--------------------*/
-$primarycolor 					: #d35400;
-$secondarycolor 				: #f39c12;
+$primarycolor 					: #000; //#d35400;
+$secondarycolor 				: #000; //#f39c12;
 
-$neutralcolor 					: #2c3e50;
-$midneutralcolor 				: darken($neutralcolor,10%);
+$neutralcolor 					: #ddd; //#2c3e50;
 $darkneutralcolor 			: darken($neutralcolor,20%);
-
-$lightneutralcolor 			: #7f8c8d;
-$lighterneutralcolor 		: #95a5a6;
-$lightestneutralcolor 	: #ecf0f1;
+$lightneutralcolor 			: lighten($neutralcolor, 20%);
 
 $black 							    : #000;
 $white 							    : #fff;
 
-$textcolor              : #fff;
+$textcolor              : #000;
 $fadedtextcolor         : darken($textcolor, 50%);
 
 $linkcolor 		    			: $primarycolor;
@@ -49,3 +46,18 @@ $infocolor 						: rgb(216,220,162);
 $inversecolor 				: rgb(65,65,65);
 $successcolor 				: rgb(188,212,222);
 $warningcolor 				: $errorcolor;
+
+// deprecated
+$lighterneutralcolor 		: #ff0000;
+$lightestneutralcolor 	: #ff0000;
+$midneutralcolor        : #ff0000;
+
+$homecolor:     #e74c3c;
+$aboutcolor:    #1abc9c;
+$artistscolor:  #34495e;
+$newscolor:     #9b59b6;
+$tagscolor:     #f1c40f;
+
+$artistcolor:   #2980b9;
+$newsitemcolor: #27ae60;
+$tagcolor:      #d35400;

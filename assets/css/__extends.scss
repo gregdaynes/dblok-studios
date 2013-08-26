@@ -6,7 +6,7 @@
 %text-overflow {
   /*--------------------*\
     Malarky/Rock-Hammer
-    
+
     @extend %text-overflow
   \*--------------------*/
   overflow: hidden;
@@ -21,9 +21,9 @@
 %zero {
   /*--------------------*\
     Malarky/Rock-Hammer
-    
+
     zero out margin and padding
-    
+
     @extend %zero
   \*--------------------*/
   margin: 0;
@@ -49,19 +49,19 @@
     content: " "; /* 1 */
     display: table; /* 2 */
   }
-  
+
   &:after {
     clear: both;
   }
 }
 
-
+// testing
 
 %list-style-none {
   /*--------------------*\
     @extend %list-style-none
   \*--------------------*/
-  
+
   @extend %zero;
   list-style: none;
 }
@@ -71,7 +71,7 @@
 %box-sizing {
   /*--------------------*\
     CSS3Please.com + Everyone
-    
+
     @extend %box-sizing
   \*--------------------*/
   box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
@@ -83,8 +83,8 @@
 
 %hide-screen {
   /*--------------------*\
-    
-    
+
+
     @extend %hide-screen
   \*--------------------*/
   overflow: hidden;
@@ -95,4 +95,19 @@
   padding: 0;
   border: 0;
   display: block;
+}
+
+%absolute-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+%transition {
+  transition: all $transitionSpeed;
 }

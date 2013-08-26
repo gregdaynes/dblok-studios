@@ -13,11 +13,19 @@ genres:
   - Electro-House
   - Mid-tempo
 
-mixcloud: 
+tags:
+  - artist
+  - victoria
+  - british columbia
+  - breaks
+  - electro-house
+  - mid-tempo
+
+mixcloud:
 bandcamp:
-soundcloud: 
-facebook: 
-twitter: 
+soundcloud:
+facebook:
+twitter:
 ---
 Sean MacMillan (MrMacHimself) has been making a fair bit of NOISE in the West coast club and Rave Scene since late 2010. With headlining slots in cities around Vancouver Island and the lower Mainland, but its not going to stop there.
 

@@ -7,9 +7,17 @@ location: Duncan, BC
 role: artist
 category: artist
 layout: artist
-genres: 
+genres:
   - Dubstep
   - Electro-House
+
+tags:
+  - artist
+  - duncan
+  - british columbia
+  - dubstp
+  - electro-house
+
 mixcloud: dblok-royal_tease
 bandcamp: null
 soundcloud: null

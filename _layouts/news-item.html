@@ -1,0 +1,18 @@
+---
+layout: default
+body-class: news-item-page
+---
+<article class="news-item">
+  <header class="news-item__header">
+    <h1 class="news-item__title">{{page.title}}</h1>
+
+    <ul class="news-item__details">
+      <li class="news-item__details__author">{{page.author}}</li>
+      <li class="news-item__details__date">{{page.date | date: "%B %d, %Y"}}</li>
+    </ul>
+  </header>
+
+  {{content}}
+</article>
+
+{% include fragment/tags-page_tags.html %}

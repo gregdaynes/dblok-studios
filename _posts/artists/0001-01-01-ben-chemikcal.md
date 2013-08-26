@@ -12,12 +12,20 @@ genres:
   - UK Garage
   - 4x4
   - Dubstep
-  
+
+tags:
+  - artist
+  - duncan
+  - british columbia
+  - uk garage
+  - dubstep
+  - 4x4
+
 mixcloud: dblok-ben_chemikal
 bandcamp:
-soundcloud: 
-facebook: 
-twitter: 
+soundcloud:
+facebook:
+twitter:
 ---
 Ben Chemikal was born and raised in Duncan BC, and constantly surrounded by music from a young age. After several years of piano lessons, he went on to play guitar, drums, and any other instrument that was just lying around. It wasn't long until Ben found himself attending a Vancouver Island rave. Where he saw some Electronic DJing first hand.
 

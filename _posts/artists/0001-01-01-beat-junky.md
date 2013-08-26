@@ -13,11 +13,19 @@ genres:
   - dubstep
   - psytrance
 
+tags:
+  - artist
+  - duncan
+  - british columbia
+  - drum & bass
+  - dubstep
+  - psytrance
+
 mixcloud: dblok-beat_junky
 bandcamp:
-soundcloud: 
-facebook: 
-twitter: 
+soundcloud:
+facebook:
+twitter:
 ---
 The Beat Junky, Nick, has always had a love for music and dancing; finding Break Dancing in 1983, he began teaching, and competing on Vancouver Island. With this fuelling his passion for the arts he grew to appreciate the many Genre's of Electronic music.
 

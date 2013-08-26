@@ -7,10 +7,19 @@ location: Duncan, BC
 role: friend
 category: artist
 layout: artist
-genres: 
+genres:
   - Breaks
   - Electro House
   - Drum & Bass
+
+tags:
+  - artist
+  - victoria
+  - british columbia
+  - drum & bass
+  - breaks
+  - electro-house
+
 mixcloud: null
 bandcamp: null
 soundcloud: null

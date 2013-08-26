@@ -1,18 +1,42 @@
 @import "m__person";
 @import "m__navigation";
 @import "m__person--artist";
+@import "m__news";
+@import "m__tags";
 
 /*--------------------*\
   site-logo
 \*--------------------*/
+
 .site-logo {
-  height: 200px;
-  
-  h1, em {
-    @extend %zero;
-    //@extend %hide-screen;
+  height: 125px;
+  color: $white;
+  white-space: nowrap;
+  position: relative;
+
+  .site-name {
+    @include font-size(48);
+    height: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
-} /**/
+
+  .tagline {
+    @include font-size(14);
+    display: block;
+  }
+
+  .site-name,
+  .tagline {
+    @extend %zero;
+    font-weight: 200;
+    text-align: center;
+    text-transform: lowercase;
+  }
+
+}/**/
 
 /*--------------------*\
   site-copyright
@@ -20,9 +44,5 @@
 .site-copyright {
   @extend %zero;
   text-align: center;
-  color: $midneutralcolor;
   @include font-size(14);
 }
-
-
-

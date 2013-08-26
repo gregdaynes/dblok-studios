@@ -7,8 +7,15 @@ location: Victoria, BC
 role: friend
 category: artist
 layout: artist
-genres: 
+genres:
   - Jungle
+
+tags:
+  - artist
+  - victoria
+  - british columbia
+  - jungle
+
 mixcloud: null
 bandcamp: null
 soundcloud: null

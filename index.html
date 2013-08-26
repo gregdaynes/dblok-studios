@@ -1,4 +1,29 @@
 ---
 layout: default
 title: Home
+body-class: home-page
 ---
+
+<div class="news">
+  <h2 class="news__header">News</h2>
+
+  <section class="news__latest-news">
+    <h2 class="news__latest-news__header section-header">Latest News</h2>
+    {% for item in site.categories.news limit:1 %}
+      {% if forloop.index0 == 0 %}
+        {% include partials/news.item--full.html %}
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <section class="news__recent-news">
+    <h2 class="news__recent-news__header section-header">Recent News</h2>
+    <ul class="news__recent-news__items">
+    {% for item in site.categories.news limit: 4 %}
+      {% if forloop.index0 >= 1 %}
+        <li class="news__recent-news__item">{% include partials/news.item--teaser.html %}</li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </section>
+</div>

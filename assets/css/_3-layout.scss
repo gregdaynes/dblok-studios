@@ -3,7 +3,34 @@
 .header {
   @extend %box-sizing;
   margin: 0 -20px;
+  border-bottom: 1px solid lighten($neutralcolor, 10%);
+  height: 250px;
+  position: relative;
+
+  .social {
+    @extend %list-style-none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 15%;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      margin: 0 ($horizontal-gutter / 4);
+    }
+
+    a {
+      text-indent: -999em;
+      display: block;
+      background-position-x: center;
+    }
+  }
 }
+
+
 
 
 
@@ -15,6 +42,12 @@
   @extend %box-sizing;
   margin: 20px -20px;
   padding: 20px 0;
+  color: $fadedtextcolor;
+  border-top: 1px solid lighten($neutralcolor, 10%);
+
+  a {
+    color: $fadedtextcolor;
+  }
 }
 
 
@@ -29,7 +62,7 @@
 
 .executives__executive { // individual
   @extend %grid__item;
-  @extend %bp3--third;
+  @extend %bp3--one-third;
 }
 
 .executives__executive .artist-genres {
@@ -46,8 +79,8 @@
 
 .staff__staff-member { // individual
   @extend %grid__item;
-  @extend %bp3--third;
-  @extend %bp4--quarter;
+  @extend %bp3--one-third;
+  @extend %bp4--one-quarter;
 }
 
 
@@ -62,9 +95,9 @@
 
 .artists__artist { // individual
   @extend %grid__item;
-  @extend %bp2--half;
-  @extend %bp3--third;
-  @extend %bp5--quarter;
+  @extend %bp2--one-half;
+  @extend %bp3--one-third;
+  @extend %bp5--one-quarter;
 }
 
 
@@ -79,7 +112,7 @@
 
 .friends__friend { // individual
   @extend %grid__item;
-  @extend %bp2--half;
-  @extend %bp3--third;
-  @extend %bp5--quarter;
+  @extend %bp2--one-half;
+  @extend %bp3--one-third;
+  @extend %bp5--one-quarter;
 }

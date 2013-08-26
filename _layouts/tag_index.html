@@ -1,0 +1,19 @@
+---
+layout: default
+body-class: tag-page
+---
+{% include fragment/tags-all_tags.html %}
+
+<h3 class="tag-page__header">{{page.title}}</h3>
+<ul class="tagged-posts">
+  {% for post in site.posts %}
+  {% for tag in post.tags %}
+  {% if tag == page.tag %}
+  <li class="tagged-posts__post">
+    <a class="tagged-posts__post__title" href='{{post.url}}'>{{post.title}}</a>
+    <p class="tagged-posts__post_summary">{{post.summary}}</p>
+  </li>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</ul>

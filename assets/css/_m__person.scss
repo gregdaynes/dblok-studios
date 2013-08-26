@@ -1,17 +1,18 @@
 // General
 // -------
 .person-link { // a - hyperlink to page
-  
+
 }
 .person-container { // div - info container
   text-align: center;
 }
 
-.name {  // h# - person name - artist name 
+.name {  // h# - person name - artist name
   @extend %zero;
   color: $textcolor;
 }
 
 .location { // span - town/city, state
   color: $fadedtextcolor;
+  @include font-size(12);
 }

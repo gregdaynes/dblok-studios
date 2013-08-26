@@ -4,6 +4,7 @@
 html,
 body {
 	min-height: 100%;
+
 }
 
 /**
@@ -27,6 +28,7 @@ html {
 body {
   margin: 0;
 	@include font-size(16);
+	line-height: 1.6;
 }
 
 /*
@@ -58,7 +60,7 @@ a:link {
 
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- * 1. Remove border when inside `a` element in IE 8/9. 
+ * 1. Remove border when inside `a` element in IE 8/9.
  */
 img {
   vertical-align: middle;

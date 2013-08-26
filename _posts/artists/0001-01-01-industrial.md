@@ -28,12 +28,33 @@ genres:
   - screwgaze
   - ambient
 
+tags:
+  - artist
+  - duncan
+  - british columbia
+  - minimal
+  - techno
+  - tech-house
+  - house
+  - electro
+  - electro-house
+  - breaks
+  - drum & bass
+  - dubstep
+  - psytrance
+  - noise
+  - glitch
+  - hip-hop
+  - witch-house
+  - screwgaze
+  - ambient
+
 mixcloud: dblok-industrial
 bandcamp:
   - url: dblok-empire
     release: night-riders
     id: 3490092856
-soundcloud: 
+soundcloud:
 facebook: gregdaynes
 twitter: gregdaynes
 ---

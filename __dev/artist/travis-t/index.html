@@ -28,24 +28,43 @@ License: Apache License v2.0. http://www.apache.org/licenses/LICENSE-2.0
 <!-- RSS Feed -->
 <link href="/feed.rss" rel="alternate" type="application/rss+xml" title="D-Blok Studios RSS Feed" />
 
+<script>
+		/* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
+		window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0];r.rel="stylesheet",r.href=e[o&&n?0:o?1:2],a.parentNode.insertBefore(r,a)},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+		grunticon( [ "/assets/icons/icons.data.svg.css", "/assets/icons/icons.data.png.css", "/assets/icons/icons.fallback.css" ] );</script>
+		<noscript><link href="/assets/icons/icons.fallback.css" rel="stylesheet"></noscript>
 
-<body >
+<body class="artist-page">
 
 <nav class="nav main-site-nav">
   <h2 class="main-site-nav__header">Navigation</h2>
-  
+
   <ul class="main-site-nav__list">
-    <li class="main-site-nav__item"><a class="" href="/">Home</a></li>
-    <li class="main-site-nav__item"><a class="" href="/about">About</a></li>
-    <li class="main-site-nav__item"><a class="" href="/artists">Artists</a></li>
+    <li class="main-site-nav__item main-site-nav__item__home  "><a href="/">Home</a></li>
+    <li class="main-site-nav__item main-site-nav__item__about "><a href="/about">About</a></li>
+    <li class="main-site-nav__item main-site-nav__item__artists "><a href="/artists">Artists</a></li>
+    <li class="main-site-nav__item main-site-nav__item__news "><a href="/news">News</a></li>
   </ul>
 </nav>
 
 <header class="header">
   <hgroup class="site-logo">
-    <h1>D-Blok Studios</h1>
-    <em>We Make Beats. We Throw Parties. You Get Down</em>
+    <h1 class="site-name">
+      D-Blok Studios<!--
+   --><small class="tagline">We Make Beats. We Throw Parties. You Get Down</small>
+    </h1>
   </hgroup>
+
+  <ul class="social">
+    <li class="social__twitter">
+      <a href="#" class="icon-twitter--light">Follow us on Twitter</a>
+    </li>
+    <li class="social__facebook">
+      <a href="#" class="icon-facebook--light">Find us on Facebook</a>
+    </li>
+    <li class="social__email">
+      <a href="#" class="icon-mail--light">Email us</a>
+    </li>
 </header>
 
 <h3>Travis-T</h3>
@@ -79,13 +98,13 @@ Duncan, BC
 
 
 
-
 <footer class="footer">
   <p class="site-copyright">© 2013 D-Blok Studios. All rights reserved</p>
-  
+
   <ul class="nav copyright-menu">
-    <li class="copyright-menu__item"><a class="" href="/">Privacy Policy</a></li>
-    <li class="copyright-menu__item"><a class="" href="/about">Terms of Service</a></li>
+    <li class="copyright-menu__item"><a class="" href="/tags">Tags</a></li>
+    <li class="copyright-menu__item"><a class="" href="/privacy">Privacy Policy</a></li>
+    <li class="copyright-menu__item"><a class="" href="/terms">Terms of Service</a></li>
   </ul>
 </footer>
 

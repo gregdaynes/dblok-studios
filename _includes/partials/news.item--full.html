@@ -1,0 +1,14 @@
+<article class="news-item">
+  <header class="news-item__header">
+    <a href="{{item.url}}">
+      <h1>{{item.title}}</h1>
+    </a>
+
+    <ul class="news-item__details">
+      <li class="news-item__details__author">{{item.author}}</li>
+      <li class="news-item__details__date">{{item.date | date: "%B %d, %Y"}}</li>
+    </ul>
+  </header>
+
+  {{item.content}}
+</article>

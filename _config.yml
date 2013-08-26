@@ -1,6 +1,6 @@
 # Dev stuff
 markdown:  rdiscount
-safe:      true
+# safe:      true
 lsi:       false
 pygments:  true
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
@@ -10,6 +10,9 @@ permalink: /:categories/:title
 charset:   utf-8
 baseurl:   /
 url:       http://localhost:4000
+
+tag_page_layout: tag_page
+tag_page_dir: tag
 
 # Specific stuff
 version:      0.0.1
@@ -28,10 +31,12 @@ copyright:    D-Blok Studios. All rights reserved
 google:       UA-30347152-1
 creator:      http://twitter.com/gregdaynes
 publisher:    Gregory Daynes
-keywords:     
-description:  
+keywords:
+description:
 twitter:      dblokstudios
 twitter_card: summary
 
 
 title-delimiter: ' • '
+
+

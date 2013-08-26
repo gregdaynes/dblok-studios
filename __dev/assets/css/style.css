@@ -1,8 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Geo);
+
 /*! ------------------------------------------------------------------------ !*\
     Created By: Gregory Daynes
-    
+
     based on BEM/SMACSS principals
-    
+
     mixins    some taken from Malarky/Rock Hammer, H5BP
     base      H5BP, Malarky/Rock Hammer, Around the Web
     normalize v2.1.2 | MIT License | git.io/normalize
@@ -25,49 +27,52 @@
   Colors
 \*--------------------*/
 
+.header .social,
 .nav,
 .main-site-nav .main-site-nav__list,
 .artist-genres,
-.executives,
-.staff,
-.artists,
-.friends,
+.news__recent-news__items,
+.news-item__header .news-item__details,
+.tag-list,
+.tagged-posts,
 fieldset,
 .name,
-.site-logo h1,
-.site-logo em,
+.news-item__header a h1,
+.site-logo .site-name,
+.site-logo .tagline,
 .site-copyright {
   /*--------------------*\
     Malarky/Rock-Hammer
-    
+
     zero out margin and padding
-    
+
     @extend %zero
   \*--------------------*/
   margin: 0;
   padding: 0;
 }
 
+.header .social,
 .nav,
 .main-site-nav .main-site-nav__list,
-.artist-genres {
+.artist-genres,
+.news__recent-news__items,
+.news-item__header .news-item__details,
+.tag-list,
+.tagged-posts {
   /*--------------------*\
     @extend %list-style-none
   \*--------------------*/
   list-style: none;
 }
 
-.executives__executive,
-.staff__staff-member,
-.artists__artist,
-.friends__friend,
 input[type="checkbox"],
 input[type="radio"],
 .header,
 .footer {
   /*--------------------*\
     CSS3Please.com + Everyone
-    
+
     @extend %box-sizing
   \*--------------------*/
   -moz-box-sizing: border-box;
@@ -76,10 +81,11 @@ input[type="radio"],
 }
 
 .executives__executive .artist-genres,
-.main-site-nav .main-site-nav__header {
+.main-site-nav .main-site-nav__header,
+.news__header {
   /*--------------------*\
-    
-    
+
+
     @extend %hide-screen
   \*--------------------*/
   overflow: hidden;
@@ -92,13 +98,180 @@ input[type="radio"],
   display: block;
 }
 
+.main-site-nav__item,
+.tag-list__tag a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+
+/**
+ * CONTENTS
+ * INTRODUCTION.........How the grid system works.
+ * VARIABLES............Your settings.
+ * MIXINS...............Library mixins.
+ * GRID SETUP...........Build the grid structure.
+ * WIDTHS...............Build our responsive widths around our breakpoints.
+ * PUSH.................Push classes.
+ * PULL.................Pull classes.
+ */
+
+/*------------------------------------*\
+    $INTRODUCTION
+\*------------------------------------*/
+
+/**
+ * csswizardry grids provides you with widths to suit a number of breakpoints
+ * designed around devices of a size you specify. Out of the box, csswizardry
+ * grids caters to the following types of device:
+ *
+ * palm     --  palm-based devices, like phones and small tablets
+ * lap      --  lap-based devices, like iPads or laptops
+ * portable --  all of the above
+ * desk     --  stationary devices, like desktop computers
+ * regular  --  any/all types of device
+ *
+ * These namespaces are then used in the library to give you the ability to
+ * manipulate your layouts based around them, for example:
+ *
+   <div class="grid__item  one-whole  lap--one-half  desk--one-third">
+ *
+ * This would give you a grid item which is 100% width unless it is on a lap
+ * device, at which point it become 50% wide, or it is on a desktop device, at
+ * which point it becomes 33.333% width.
+ *
+ * csswizardry grids also has push and pull classes which allow you to nudge
+ * grid items left and right by a defined amount. These follow the same naming
+ * convention as above, but are prepended by either `push--` or `pull--`, for
+ * example:
+ *
+   `class="grid__item  one-half  push--one-half"`
+ *
+ * This would give you a grid item which is 50% width and pushed over to the
+ * right by 50%.
+ *
+ * All classes in csswizardry grids follow this patten, so you should fairly
+ * quickly be able to piece together any combinations you can imagine, for
+ * example:
+ *
+   `class="grid__item  one-whole  lap--one-half  desk--one-third  push--desk--one-third"`
+ *
+   `class="grid__item  one-quarter  palm--one-half  push--palm--one-half"`
+ *
+   `class="grid__item  palm--one-third  desk--five-twelfths"`
+ */
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to ‘false’:
+ */
+
+/**
+ * Is this build mobile first? Setting to ‘true’ means that all grids will be
+ * 100% width if you do not apply a more specific class to them.
+ */
+
+/**
+ * Set the spacing between your grid items.
+ */
+
+/**
+ * Would you like Sass’ silent classes, or regular CSS classes?
+ */
+
+/**
+ * Would you like push and pull classes enabled?
+ */
+
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, desk, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to ‘true’.
+ */
+
+/**
+ * You do not need to edit anything from this line onward; csswizardry-grids is
+ * good to go. Happy griddin’!
+ */
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+/**
+ * These mixins are for the library to use only, you should not need to modify
+ * them at all.
+ *
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+
+/**
+ * Drop relative positioning into silent classes which can’t take advantage of
+ * the `[class*="push--"]` and `[class*="pull--"]` selectors.
+ */
+
+/*------------------------------------*\
+    $GRID SETUP
+\*------------------------------------*/
+
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ */
+
 .executives,
 .staff,
 .artists,
 .friends {
   list-style: none;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
   margin-left: -24px;
+  /* [3] */
 }
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
 
 .executives__executive,
 .staff__staff-member,
@@ -112,36 +285,361 @@ input[type="radio"],
   /* [3] */
   width: 100%;
   /* [4] */
+  /* [5] */
+  -moz-box-sizing: border-box;
+  /* [5] */
+  box-sizing: border-box;
+  /* [5] */
+}
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends `.grid`.
+ */
+
+/**
+ * Align the entire grid to the right. Extends `.grid`.
+ */
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+
+/**
+ * Create grids with wider gutters. Extends `.grid`.
+ */
+
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+
+/**
+ * Create our width classes, prefixed by the specified namespace.
+ */
+
+/**
+ * Our regular, non-responsive width classes.
+ */
+
+/**
+ * Whole
+ */
+
+/**
+ * Halves
+ */
+
+/**
+ * Thirds
+ */
+
+/**
+ * Quarters
+ */
+
+/**
+ * Fifths
+ */
+
+/**
+ * Sixths
+ */
+
+/**
+ * Eighths
+ */
+
+/**
+ * Tenths
+ */
+
+/**
+ * Twelfths
+ */
+
+/**
+ * Our responsive classes, if we have enabled them.
+ */
+
+@media only screen and (max-width: 29.875em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
+  /**
+   * Thirds
+   */
+
+  /**
+   * Quarters
+   */
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
 }
 
 @media only screen and (min-width: 30em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
   .artists__artist,
   .friends__friend {
     width: 50%;
   }
+
+  /**
+   * Thirds
+   */
+
+  /**
+   * Quarters
+   */
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
 }
 
 @media only screen and (min-width: 37.5em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
+  /**
+   * Thirds
+   */
+
   .executives__executive,
   .staff__staff-member,
   .artists__artist,
   .friends__friend {
     width: 33.333%;
   }
+
+  /**
+   * Quarters
+   */
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
 }
 
 @media only screen and (min-width: 48em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
+  /**
+   * Thirds
+   */
+
+  /**
+   * Quarters
+   */
+
   .staff__staff-member {
     width: 25%;
   }
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
 }
 
 @media only screen and (min-width: 62em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
+  /**
+   * Thirds
+   */
+
+  /**
+   * Quarters
+   */
+
   .artists__artist,
   .friends__friend {
     width: 25%;
   }
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
 }
+
+@media only screen and (min-width: 86.375em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
+  /**
+   * Thirds
+   */
+
+  /**
+   * Quarters
+   */
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
+}
+
+/*------------------------------------*\
+    $PUSH
+\*------------------------------------*/
+
+/**
+ * Push classes, to move grid items over to the right by certain amounts.
+ */
+
+/*------------------------------------*\
+    $PULL
+\*------------------------------------*/
+
+/**
+ * Pull classes, to move grid items back to the left by certain amounts.
+ */
 
 /* ==========================================================================
    HTML5 display definitions
@@ -534,11 +1032,12 @@ body {
   /*--------------------*\
     rem for browsers with support
     px for ones without
-    
+
     @include font-size(integer)
   \*--------------------*/
   font-size: 16px;
   font-size: 1.6rem;
+  /*   line-height: 1.6; */
   line-height: 1.6;
 }
 
@@ -586,7 +1085,7 @@ a:link {
 
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- * 1. Remove border when inside `a` element in IE 8/9. 
+ * 1. Remove border when inside `a` element in IE 8/9.
  */
 
 img {
@@ -679,7 +1178,7 @@ th {
     how to go about splitting words to improve the layout of text when
     line-wrapping
     https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
-    
+
     @include css-hyphens( none | manual | auto)
   \*--------------------*/
   -webkit-hyphens: auto;
@@ -695,31 +1194,68 @@ th {
 
 body {
   padding: 0 20px;
-  background-color: #080b0e;
-  color: #ecf0f1;
 }
 
 a {
   text-decoration: none;
-  color: #d35400;
+  color: black;
 }
 
 a:visited {
-  color: #c87f0a;
+  color: black;
 }
 
 a:hover,
 a:focus {
-  color: #f39c12;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 200;
 }
 
 .header {
   margin: 0 -20px;
+  border-bottom: 1px solid #f7f7f7;
+  height: 250px;
+  position: relative;
+}
+
+.header .social {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 15%;
+  text-align: center;
+}
+
+.header .social li {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin: 0 6px;
+}
+
+.header .social a {
+  text-indent: -999em;
+  display: block;
+  background-position-x: center;
 }
 
 .footer {
   margin: 20px -20px;
   padding: 20px 0;
+  color: black;
+  border-top: 1px solid #f7f7f7;
+}
+
+.footer a {
+  color: black;
 }
 
 .person-container {
@@ -727,26 +1263,44 @@ a:focus {
 }
 
 .name {
-  color: white;
+  color: black;
 }
 
 .location {
-  color: grey;
+  color: black;
+  /*--------------------*\
+    rem for browsers with support
+    px for ones without
+
+    @include font-size(integer)
+  \*--------------------*/
+  font-size: 12px;
+  font-size: 1.2rem;
+  /*   line-height: 1.6; */
 }
 
 /*--------------------*\
   navigation
 \*--------------------*/
 
+.main-site-nav__item {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-color: transparent;
+}
+
+.main-site-nav__item:hover {
+  border-bottom-width: 3px;
+}
+
 /*--------------------*\
   Main Site Navigation
 \*--------------------*/
 
 .main-site-nav {
-  padding: 20px;
+  padding: 23px 0;
   margin: 0 -20px;
-  background-color: #1a242f;
-  border-bottom: 1px solid #233140;
+  border-bottom: 1px solid #f7f7f7;
 }
 
 .main-site-nav .main-site-nav__list {
@@ -755,19 +1309,15 @@ a:focus {
 
 .main-site-nav .main-site-nav__list .main-site-nav__item {
   display: inline-block;
+  margin: 0 24px 0 0;
 }
 
 .main-site-nav .main-site-nav__list .main-site-nav__item a {
-  color: #ecf0f1;
-  padding: 0 20px;
+  display: block;
 }
 
 .main-site-nav .main-site-nav__list .main-site-nav__item a:last-of-type {
   padding-right: 0;
-}
-
-.main-site-nav .main-site-nav__list .main-site-nav__item a.active {
-  color: #7f8c8d;
 }
 
 /*--------------------*\
@@ -783,34 +1333,33 @@ a:focus {
 }
 
 .copyright-menu .copyright-menu__item a {
-  color: #1a242f;
   /*--------------------*\
-        rem for browsers with support
-        px for ones without
-        
-        @include font-size(integer)
-      \*--------------------*/
+      rem for browsers with support
+      px for ones without
+  
+      @include font-size(integer)
+    \*--------------------*/
   font-size: 12px;
   font-size: 1.2rem;
-  line-height: 1.6;
+  /*   line-height: 1.6; */
 }
 
 .artist-genres {
   /*--------------------*\
     rem for browsers with support
     px for ones without
-    
+
     @include font-size(integer)
   \*--------------------*/
   font-size: 14px;
   font-size: 1.4rem;
-  line-height: 1.6;
+  /*   line-height: 1.6; */
 }
 
 .artist-genres__genre {
   display: inline-block;
   text-transform: lowercase;
-  color: grey;
+  color: black;
 }
 
 .artist-genres__genre:after {
@@ -821,12 +1370,160 @@ a:focus {
   content: '';
 }
 
+.news {
+  overflow: hidden;
+}
+
+.news__latest-news {
+  position: relative;
+}
+
+.news__recent-news {
+  position: relative;
+}
+
+.news__recent-news__item .news-item__title {
+  /*--------------------*\
+    rem for browsers with support
+    px for ones without
+
+    @include font-size(integer)
+  \*--------------------*/
+  font-size: 20px;
+  font-size: 2rem;
+  /*   line-height: 1.6; */
+  color: black;
+}
+
+.news-item {
+  font-weight: 200;
+}
+
+.news__latest-news__header,
+.news__recent-news__header {
+  color: #dddddd;
+  border-bottom: 1px solid #dddddd;
+  /*--------------------*\
+    rem for browsers with support
+    px for ones without
+
+    @include font-size(integer)
+  \*--------------------*/
+  font-size: 14px;
+  font-size: 1.4rem;
+  /*   line-height: 1.6; */
+}
+
+.news-item__header a {
+  color: black;
+}
+
+.news-item__header a h1 {
+  /*--------------------*\
+    rem for browsers with support
+    px for ones without
+
+    @include font-size(integer)
+  \*--------------------*/
+  font-size: 24px;
+  font-size: 2.4rem;
+  /*   line-height: 1.6; */
+}
+
+.news-item__header .news-item__details {
+  color: black;
+  margin: 5px 0;
+}
+
+.news-item__header .news-item__details li {
+  display: inline;
+}
+
+.news-item__header .news-item__details li:first-child:after {
+  content: '•';
+  margin: 0 10px;
+  color: #dddddd;
+}
+
+.tag-list {
+  /*   @extend %grid; */
+}
+
+.tag-list__tag {
+  display: inline-block;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.tag-list__tag a {
+  border: 1px solid #f1c40f;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin: 0 6px;
+  background-color: #f7dc6f;
+  /*--------------------*\
+    rem for browsers with support
+    px for ones without
+
+    @include font-size(integer)
+  \*--------------------*/
+  font-size: 12px;
+  font-size: 1.2rem;
+  /*   line-height: 1.6; */
+  text-transform: capitalize;
+}
+
+.tag-list__tag a:hover {
+  background-color: #f8c573;
+  border-color: #f39c12;
+}
+
 /*--------------------*\
   site-logo
 \*--------------------*/
 
 .site-logo {
-  height: 200px;
+  height: 125px;
+  color: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.site-logo .site-name {
+  /*--------------------*\
+    rem for browsers with support
+    px for ones without
+
+    @include font-size(integer)
+  \*--------------------*/
+  font-size: 48px;
+  font-size: 4.8rem;
+  /*   line-height: 1.6; */
+  height: 50%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.site-logo .tagline {
+  /*--------------------*\
+    rem for browsers with support
+    px for ones without
+
+    @include font-size(integer)
+  \*--------------------*/
+  font-size: 14px;
+  font-size: 1.4rem;
+  /*   line-height: 1.6; */
+  display: block;
+}
+
+.site-logo .site-name,
+.site-logo .tagline {
+  font-weight: 200;
+  text-align: center;
+  text-transform: lowercase;
 }
 
 /**/
@@ -837,21 +1534,91 @@ a:focus {
 
 .site-copyright {
   text-align: center;
-  color: #1a242f;
   /*--------------------*\
     rem for browsers with support
     px for ones without
-    
+
     @include font-size(integer)
   \*--------------------*/
   font-size: 14px;
   font-size: 1.4rem;
-  line-height: 1.6;
+  /*   line-height: 1.6; */
+}
+
+.artists__artist {
+  margin-bottom: 24px;
+}
+
+.friends__friend {
+  margin-bottom: 24px;
 }
 
 /*--------------------*\
-  global  
+  theme
 \*--------------------*/
+
+.main-site-nav__item.active.main-site-nav__item__home,
+.main-site-nav__item:hover.main-site-nav__item__home {
+  border-color: #e74c3c;
+}
+
+.main-site-nav__item.active.main-site-nav__item__home a,
+.main-site-nav__item:hover.main-site-nav__item__home a {
+  color: #e74c3c;
+}
+
+.main-site-nav__item.active.main-site-nav__item__about,
+.main-site-nav__item:hover.main-site-nav__item__about {
+  border-color: #1abc9c;
+}
+
+.main-site-nav__item.active.main-site-nav__item__about a,
+.main-site-nav__item:hover.main-site-nav__item__about a {
+  color: #1abc9c;
+}
+
+.main-site-nav__item.active.main-site-nav__item__artists,
+.main-site-nav__item:hover.main-site-nav__item__artists {
+  border-color: #34495e;
+}
+
+.main-site-nav__item.active.main-site-nav__item__artists a,
+.main-site-nav__item:hover.main-site-nav__item__artists a {
+  color: #34495e;
+}
+
+.main-site-nav__item.active.main-site-nav__item__news,
+.main-site-nav__item:hover.main-site-nav__item__news {
+  border-color: #9b59b6;
+}
+
+.main-site-nav__item.active.main-site-nav__item__news a,
+.main-site-nav__item:hover.main-site-nav__item__news a {
+  color: #9b59b6;
+}
+
+.home-page .header {
+  background-color: #e74c3c;
+}
+
+.about-page .header {
+  background-color: #1abc9c;
+}
+
+.artists-page .header,
+.artist-page .header {
+  background-color: #34495e;
+}
+
+.news-page .header,
+.news-item-page .header {
+  background-color: #9b59b6;
+}
+
+.tag-page .header,
+.tags-papge .header {
+  background-color: #f1c40f;
+}
 
 @media print {
   * {
@@ -923,7 +1690,7 @@ a:focus {
 }
 
 /*--------------------*\
-  add box to screen displaying current breakpoint  
+  add box to screen displaying current breakpoint
 \*--------------------*/
 
 body:after {
@@ -935,29 +1702,40 @@ body:after {
   opacity: 0.3;
   /*--------------------*\
     Malarky/Rock-Hammer
-    
+
     @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
   \*--------------------*/
   /*--------------------*\
     Malarky/Rock-Hammer
-    
+
     @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
   \*--------------------*/
   /*--------------------*\
     Malarky/Rock-Hammer
-    
+
     @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
   \*--------------------*/
   /*--------------------*\
     Malarky/Rock-Hammer
-    
+
     @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
   \*--------------------*/
   /*--------------------*\
     Malarky/Rock-Hammer
-    
+
     @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
   \*--------------------*/
+  /*--------------------*\
+    Malarky/Rock-Hammer
+
+    @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+  \*--------------------*/
+}
+
+@media (max-width: 29.875em) {
+  body:after {
+    content: 'bp1';
+  }
 }
 
 @media (min-width: 30em) {

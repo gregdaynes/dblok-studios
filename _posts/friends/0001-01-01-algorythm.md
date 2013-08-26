@@ -7,9 +7,17 @@ location: Victoria, BC
 role: friend
 category: artist
 layout: artist
-genres: 
+genres:
   - Drum & Bass
   - House
+
+tags:
+  - artist
+  - victoria
+  - british columbia
+  - drum & bass
+  - house
+
 mixcloud: null
 bandcamp: null
 soundcloud: null

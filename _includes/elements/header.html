@@ -1,6 +1,19 @@
 <header class="header">
   <hgroup class="site-logo">
-    <h1>{{ site.name }}</h1>
-    <em>{{ site.tagline }}</em>
+    <h1 class="site-name">
+      {{ site.name }}<!--
+   --><small class="tagline">{{ site.tagline }}</small>
+    </h1>
   </hgroup>
+
+  <ul class="social">
+    <li class="social__twitter">
+      <a href="#" class="icon-twitter--light">Follow us on Twitter</a>
+    </li>
+    <li class="social__facebook">
+      <a href="#" class="icon-facebook--light">Find us on Facebook</a>
+    </li>
+    <li class="social__email">
+      <a href="#" class="icon-mail--light">Email us</a>
+    </li>
 </header>

@@ -1,12 +1,13 @@
 ---
 layout: default
+body-class: about-page
 ---
 
 {{ content }}
 
 <ul class="executives">
 {% for person in site.posts %}{% if person.role == 'executive' %}<li class="executives__executive">{% include partials/person--short.html %}</li>{% endif %}{% endfor %}
-</ul>    
+</ul>
 
 <ul class="staff">
 {% for person in site.posts %}{% if person.role == 'staff' %}<li class="staff__staff-member">{% include partials/person--short.html %}</li>{% endif %}{% endfor %}

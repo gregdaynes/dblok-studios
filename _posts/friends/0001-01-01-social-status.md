@@ -7,7 +7,11 @@ location: Nanaimo, BC
 role: friend
 category: artist
 layout: artist
-genres: 
+genres:
+tags:
+  - artist
+  - nanaimo
+  - british columbia
 mixcloud: null
 bandcamp: null
 soundcloud: null

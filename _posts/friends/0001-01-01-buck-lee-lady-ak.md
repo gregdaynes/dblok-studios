@@ -7,11 +7,21 @@ location: Nelson, BC
 role: friend
 category: artist
 layout: artist
-genres: 
+genres:
   - Drum & Bass
   - Hip Hop
   - Reggae
   - UK Funky
+
+tags:
+  - artist
+  - nelson
+  - british columbia
+  - drum & bass
+  - hip hop
+  - reggae
+  - uk funky
+
 mixcloud: null
 bandcamp: null
 soundcloud: null

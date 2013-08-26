@@ -3,14 +3,13 @@
 {% include html/conditional.html %}
 {% include html/head.html %}
 
-<body {% if page.pageclass != null %}class="{{page.pageclass}}"{% endif %}>
+<body {% if page.body-class != null %}class="{{page.body-class}}"{% endif %}>
 
 {% include elements/nav.html %}
 
 {% include elements/header.html %}
 
 {{content}}
-
 
 {% include elements/footer.html %}
 

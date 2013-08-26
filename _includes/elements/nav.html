@@ -1,9 +1,10 @@
 <nav class="nav main-site-nav">
   <h2 class="main-site-nav__header">Navigation</h2>
-  
+
   <ul class="main-site-nav__list">
-    <li class="main-site-nav__item"><a class="{% if page.title == "Home" %}active{% endif %}" href="/">Home</a></li>
-    <li class="main-site-nav__item"><a class="{% if page.title == "About" %}active{% endif %}" href="/about">About</a></li>
-    <li class="main-site-nav__item"><a class="{% if page.title == "Artists" %}active{% endif %}" href="/artists">Artists</a></li>
+    <li class="main-site-nav__item main-site-nav__item__home {% if page.title == "Home" %}active{% endif %} "><a href="/">Home</a></li>
+    <li class="main-site-nav__item main-site-nav__item__about {% if page.title == "About" %}active{% endif %}"><a href="/about">About</a></li>
+    <li class="main-site-nav__item main-site-nav__item__artists {% if page.title == "Artists" %}active{% endif %}"><a href="/artists">Artists</a></li>
+    <li class="main-site-nav__item main-site-nav__item__news {% if page.title == "News" %}active{% endif %}"><a href="/news">News</a></li>
   </ul>
 </nav>

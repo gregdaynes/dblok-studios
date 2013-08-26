@@ -1,17 +1,33 @@
 // Pages
 // -----
 .executives { // list
-  
+
 }
 
 .executives__exec { // individual
-  
+
 }
 
 .staff { // list
-  
+
 }
 
 .staff__staff-member { // individual
 
+}
+
+.artists { // list
+
+}
+
+.artists__artist { // individual
+  margin-bottom: $vertical-gutter;
+}
+
+.friends { // list
+
+}
+
+.friends__friend { // individual
+  margin-bottom: $vertical-gutter;
 }

@@ -1,3 +1,37 @@
 /*--------------------*\
-  global  
+  theme
 \*--------------------*/
+.main-site-nav__item.active,
+.main-site-nav__item:hover {
+  &.main-site-nav__item__home    { a { color: $homecolor; } border-color: $homecolor; }
+  &.main-site-nav__item__about   { a { color: $aboutcolor; }border-color: $aboutcolor; }
+  &.main-site-nav__item__artists { a { color: $artistscolor; }border-color: $artistscolor; }
+  &.main-site-nav__item__news    { a { color: $newscolor; } border-color: $newscolor; }
+}
+
+
+
+.home-page {
+  .header { background-color: $homecolor; } // default color
+}
+
+.about-page {
+  .header { background-color: $aboutcolor; }
+}
+
+.artists-page,
+.artist-page {
+  .header { background-color: $artistscolor; }
+}
+
+.news-page,
+.news-item-page {
+  .header { background-color: $newscolor;}
+}
+
+.tag-page,
+.tags-papge {
+  .header { background-color: $tagscolor; }
+}
+
+

@@ -9,11 +9,11 @@
   display: inline-block;
   text-transform: lowercase;
   color: $fadedtextcolor;
-  
+
   &:after {
     content: ' • ';
   }
-  
+
   &:last-of-type:after {
     content: '';
   }

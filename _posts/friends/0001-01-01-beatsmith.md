@@ -7,10 +7,19 @@ location: Victoria, Bc
 role: friend
 category: artist
 layout: artist
-genres: 
+genres:
   - Drum & Bass
   - Breaks
   - Dubstep
+
+tags:
+  - artist
+  - victoria
+  - british columbia
+  - drum & bass
+  - breaks
+  - dubstep
+
 mixcloud: null
 bandcamp: null
 soundcloud: null
