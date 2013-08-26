@@ -3,5 +3,5 @@
 *_site/*
 *.esproj
 *espressostorage*
-*__dev
-*__live
+*__dev/*
+*__live/*
