@@ -18,3 +18,4 @@ body-class: artists-page
 <ul class="friends">
   {% for person in sorted_artists %}{% if person.role == 'friend' %}<li class="friends__friend">{% include partials/person--short.html %}</li>{% endif %}{% endfor %}
 </ul>
+
