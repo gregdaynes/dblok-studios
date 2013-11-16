@@ -1,0 +1,35 @@
+/*--------------------*\
+  Main Site Navigation
+\*--------------------*/
+
+
+.main-site-nav {
+  padding: $vertical-gutter 10px;
+
+  .nav__header {
+    @extend %hide-screen;
+  }
+
+  .nav__list {
+    @extend %grid;
+  }
+
+  .nav__item {
+    @extend %grid__item;
+    @extend %bp1--one-quarter;
+    @extend %bp2--one-quarter;
+  }
+
+  a {
+    display: block;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-color: transparent;
+    @extend %transition;
+    text-align: center;
+
+    &:hover {
+      border-bottom-width: 3px;
+    }
+  }
+}

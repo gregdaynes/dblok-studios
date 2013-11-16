@@ -1,0 +1,164 @@
+<!doctype>
+<html>
+<head>
+  <link href="../assets/css/style.css">
+  <style>
+    .radio-player--full {
+      width: 320px;
+      height: 480px;
+
+
+
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+
+    .radio-player__cover-image {
+      background-image: url(https://graph.facebook.com/448944881890012/picture?type=large);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      width: 320px;
+      height: 320px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="radio-player--full">
+
+
+    <!-- Cover Image -->
+    <div class="radio-player__cover-image">
+      <!-- Facebook Event Image -->
+    </div>
+
+    <div id="jquery_jplayer_1" class="radio-player  jp-jplayer"></div>
+  	<div id="jp_container_1" class="radio-player__container  jp-audio-stream" style="display: none">
+  		<div class="jp-type-single">
+
+  		  <div class="radio-player__title  jp-title"></div>
+
+  			<div class="radio-player__interface  jp-gui jp-interface">
+  				<ul class="radio-player__controls  jp-controls">
+  					<a href="javascript:;" class="radio-player__controls__play  jp-play" tabindex="1">play</a><!--
+  			 --><a href="javascript:;" class="radio-player__controls__pause  jp-pause" tabindex="1">pause</a><!--
+  			 --><a href="javascript:;" class="radio-player__controls__mute  jp-mute" tabindex="1" title="mute">mute</a><!--
+  			 --><a href="javascript:;" class="radio-player__controls__unmute  jp-unmute" tabindex="1" title="unmute">unmute</a><!--
+  			 --><a href="javascript:;" class="radio-player__controls__volume-max  jp-volume-max" tabindex="1" title="max volume">max volume</a>
+  				</ul>
+  				<div class="radio-player__interface__volume-bar  jp-volume-bar">
+  					<div class="radio-player__interface__volume-bar-value  jp-volume-bar-value"></div>
+  				</div>
+  			</div>
+
+        <div class="radio-player__streamlink"></div>
+
+  			<div class="radio-player__no-flash-fallback jp-no-solution">
+  				<span>Update Required</span>
+  				To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+  			</div>
+  		</div>
+  	</div>
+    <div id="jplayer_inspector"></div>
+
+  </div>
+
+  <script src="../assets/js/xdomain.js" slave="http://dblokstudios.com:8000/proxy.html"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script src="../assets/js/jquery.jplayer.js"></script>
+  <script src="../assets/js/jquery.jplayer.inspector.js"></script>
+
+
+  <script type="text/javascript">
+    /*
+     * Variables
+     */
+    var playerStream = null,
+        playerBroadcastName = null,
+        playerServerUrl = null;
+
+    /*
+     * Facebook Integration
+     */
+    var initializeFacebook = function() {
+      /* Get Facebook data here */
+    }
+
+    /*
+     * JPlayer
+     */
+    var initializePlayer = function() {
+    	var stream = {
+    		title: playerBroadcastName,
+    		mp3: playerStream
+    	},
+    	ready = false;
+
+      $(".radio-player__title").html(playerBroadcastName);
+      $(".radio-player__container").css('display', 'inherit');
+      $(".radio-player__streamlink").html(playerStream);
+
+
+    	$(".radio-player").jPlayer({
+    		ready: function (event) {
+    			ready = true;
+    			$(this).jPlayer("setMedia", stream);
+    		},
+    		pause: function() {
+    			$(this).jPlayer("clearMedia");
+    		},
+    		error: function(event) {
+    			if(ready && event.jPlayer.error.type === $.jPlayer.error.URL_NOT_SET) {
+    				// Setup the media stream again and play it.
+    				$(this).jPlayer("setMedia", stream).jPlayer("play");
+    			}
+    		},
+    		swfPath: "../js",
+    		supplied: "mp3",
+    		preload: "none",
+    		wmode: "window",
+    		keyEnabled: true
+    	});
+    }
+
+    /*
+     * Get Data from radio server
+     */
+    var getData = function() {
+      $.ajax({
+        dataType: "json",
+        url: 'http://dblokstudios.com:8000/json.xsl',
+        success: function(response) {
+          if (response.icestats.sources >= 1) {
+            playerStream = response.icestats.source.listenurl;
+            playerBroadcastName = response.icestats.source.server_name;
+
+            if (response.icestats.source.server_url) {
+              initializeFacebook();
+            }
+
+            initializePlayer();
+          }
+        }
+      });
+    }
+
+    /*
+     * Check radio server is active
+     */
+    $.ajax({
+      dataType: "json",
+      url: 'http://dblokstudios.com:8000/status-check.json',
+      success: function(response) {
+        if (response.status == 200) {
+          getData();
+        }
+      }
+    });
+
+
+  </script>
+</body>
+</html>

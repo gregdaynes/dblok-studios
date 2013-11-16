@@ -1,0 +1,3 @@
+<ul class="artist__genres">
+  {% for genre in person.genres limit:{{page.limit}} %}<li class="artist__genres__genre"><span class="tag">{{ genre }}</span></li>{% endfor %}
+</ul>

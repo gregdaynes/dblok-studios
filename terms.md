@@ -2,12 +2,13 @@
 title: Terms of Service
 permalink: /terms/index.html
 layout: default
+body-class: terms-page
 ---
-## {{ site.name }} TERMS OF SERVICE
+## TERMS OF SERVICE
 
 Last Updated: {{ site.date }}
 
-These terms of service ("Terms") apply to your access and use of {{ site.url }} (the "Service"). Please read them carefully.
+These terms of service ("Terms") apply to your access and use of {{ site.name }} ({{ site.url }}) (the "Service"). Please read them carefully.
 
 ## Accepting these Terms
 
@@ -42,7 +43,7 @@ Our Service allows you and other users to post, link and otherwise make availabl
 When you post, link or otherwise make available content to the Service, you grant us the right and license to use, reproduce, modify, publicly perform, publicly display and distribute your content on or through the Service. We may format your content for display throughout the Service, but we will not edit or revise the substance of your content itself.
 
 Aside from our limited right to your content, you retain all of your rights to the content you post, link and otherwise make available on or through the Service.
-  
+
 You can remove the content that you posted by deleting it. Once you delete your content, it will not appear on the Service, but copies of your deleted content may remain in our system or backups for some period of time.
 
 You may not post, link and otherwise make available on or through the Service any of the following:
@@ -89,7 +90,7 @@ IN NO EVENT WILL {{ site.name }} BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY SPE
 You agree to defend, indemnify and hold us harmless from and against any and all costs, damages, liabilities, and expenses (including attorneys' fees, costs, penalties, interest and disbursements) we incur in relation to, arising from, or for the purpose of avoiding, any claim or demand from a third party relating to your use of the Service or the use of the Service by any person using your account, including any claim that your use of the Service violates any applicable law or regulation, or the rights of any third party, and/or your violation of these Terms.
 
 ## Copyright Complaints
-  
+
 We take intellectual property rights seriously. In accordance with the Digital Millennium Copyright Act ("DMCA") and other applicable law, we have adopted a policy of terminating, in appropriate circumstances and, at our sole discretion, access to the service for users who are deemed to be repeat infringers.
 
 ## Termination

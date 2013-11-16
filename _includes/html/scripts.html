@@ -1,0 +1,95 @@
+<script src="/assets/js/xdomain.js" slave="{{ site.xdomain }}"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+<script src="/assets/js/jquery.jplayer.js"></script>
+<script src="/assets/js/jquery.jplayer.inspector.js"></script>
+
+
+<script type="text/javascript">
+  /*
+   * Variables
+   */
+  var playerStream = null,
+      playerBroadcastName = null,
+      playerServerUrl = null;
+
+  /*
+   * Facebook Integration
+   */
+  var initializeFacebook = function() {
+    /* Get Facebook data here */
+  }
+
+  /*
+   * JPlayer
+   */
+  var initializePlayer = function() {
+  	var stream = {
+  		title: playerBroadcastName,
+  		mp3: playerStream
+  	},
+  	ready = false;
+
+    $(".radio-player__title").html(playerBroadcastName);
+    $(".radio-player__container").css('display', 'inherit');
+    $(".radio-player__streamlink").html(playerStream);
+
+
+  	$(".radio-player").jPlayer({
+  		ready: function (event) {
+  			ready = true;
+  			$(this).jPlayer("setMedia", stream);
+  		},
+  		pause: function() {
+  			$(this).jPlayer("clearMedia");
+  		},
+  		error: function(event) {
+  			if(ready && event.jPlayer.error.type === $.jPlayer.error.URL_NOT_SET) {
+  				// Setup the media stream again and play it.
+  				$(this).jPlayer("setMedia", stream).jPlayer("play");
+  			}
+  		},
+  		swfPath: "../js",
+  		supplied: "mp3",
+  		preload: "none",
+  		wmode: "window",
+  		keyEnabled: true
+  	});
+  }
+
+  /*
+   * Get Data from radio server
+   */
+  var getData = function() {
+    $.ajax({
+      dataType: "json",
+      url: 'http://dblokstudios.com:8000/json.xsl',
+      success: function(response) {
+        if (response.icestats.sources >= 1) {
+          playerStream = response.icestats.source.listenurl;
+          playerBroadcastName = response.icestats.source.server_name;
+
+          if (response.icestats.source.server_url) {
+            initializeFacebook();
+          }
+
+          initializePlayer();
+        }
+      }
+    });
+  }
+
+  /*
+   * Check radio server is active
+   */
+  $.ajax({
+    dataType: "json",
+    url: 'http://dblokstudios.com:8000/status-check.json',
+    success: function(response) {
+      if (response.status == 200) {
+        getData();
+      }
+    }
+  });
+
+
+</script>

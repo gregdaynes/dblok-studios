@@ -3,35 +3,56 @@
 \*--------------------*/
 .main-site-nav__item.active,
 .main-site-nav__item:hover {
-  &.main-site-nav__item__home    { a { color: $homecolor; } border-color: $homecolor; }
-  &.main-site-nav__item__about   { a { color: $aboutcolor; }border-color: $aboutcolor; }
-  &.main-site-nav__item__artists { a { color: $artistscolor; }border-color: $artistscolor; }
-  &.main-site-nav__item__news    { a { color: $newscolor; } border-color: $newscolor; }
+  &.main-site-nav__item__home    { a { color: $homecolor;   border-color: $homecolor;   }}
+  &.main-site-nav__item__about   { a { color: $aboutcolor;  border-color: $aboutcolor;  }}
+  &.main-site-nav__item__artists { a { color: $artistcolor; border-color: $artistcolor; }}
+  &.main-site-nav__item__news    { a { color: $newscolor;   border-color: $newscolor;   }}
 }
 
-
-
 .home-page {
+  .tag-list__tag a {
+    border: 1px solid $homecolor;
+    background-color: lighten($homecolor, 20%);
+  }
+
   .header { background-color: $homecolor; } // default color
 }
 
 .about-page {
+  .tag-list__tag a {
+    border: 1px solid $aboutcolor;
+    background-color: lighten($aboutcolor, 20%);
+  }
+
   .header { background-color: $aboutcolor; }
 }
 
 .artists-page,
 .artist-page {
-  .header { background-color: $artistscolor; }
+  .header { background-color: $artistcolor; }
 }
 
 .news-page,
 .news-item-page {
+  .tag-list__tag a {
+    border: 1px solid $newscolor;
+    background-color: lighten($newscolor, 20%);
+  }
   .header { background-color: $newscolor;}
 }
 
 .tag-page,
-.tags-papge {
-  .header { background-color: $tagscolor; }
+.tags-page {
+
+  .header { background-color: $tagcolor; }
+}
+
+.privacy-page {
+  .header { background-color: $privacycolor; }
+}
+
+.terms-page {
+  .header { background-color: $termscolor; }
 }
 
 

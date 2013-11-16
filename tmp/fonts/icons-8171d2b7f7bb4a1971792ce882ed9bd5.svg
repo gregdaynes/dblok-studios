@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-10-25: Created.
+-->
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Fri Oct 25 21:13:27 2013
+ By Gregory Daynes
+Created by Gregory Daynes with FontForge 2.0 (http://fontforge.sf.net)
+</metadata>
+<defs>
+<font id="icons" horiz-adv-x="482" >
+  <font-face 
+    font-family="icons"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0 -64 482 448"
+    underline-thickness="25.6"
+    underline-position="-51.2"
+    unicode-range="U+F100-F103"
+  />
+    <missing-glyph />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="288" 
+d="M224 352c-10 0 -32 -15 -32 -32v-64h96v-96h-96v-224h-96v224h-96v96h96v64c0 71 63 128 130 128h62v-96h-64zM224 352z" />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" 
+d="M11 304l219 -219c6 -6 16 -6 22 0l219 219c6 6 11 4 11 -4v-244c0 -17 -13 -30 -30 -30h-422c-17 0 -30 13 -30 30v244c0 8 5 10 11 4zM471 390l-219 -220c-6 -6 -16 -6 -22 0l-219 220c-6 6 -11 14 -11 19v9c0 17 13 30 30 30h422c17 0 30 -13 30 -30v-9
+c0 -5 -5 -13 -11 -19zM471 390z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" horiz-adv-x="320" 
+d="M320 -36c-22 -10 -42 -18 -60 -22s-38 -6 -59 -6c-24 0 -45 3 -63 9s-33 14 -46 25s-15 19 -20 31s-8 40 -8 63v160h-64v96c96 0 96 96 96 128h96v-129l96 1v-96h-96v-128c0 -30 -4 -52 10 -66c9 -10 25 -11 40 -11c26 0 52 9 78 26v-81v0zM320 -36z" />
+    <glyph glyph-name="uniF103" unicode="&#xf103;" 
+d="M482 387v0c-13 -20 -31 -38 -50 -52c0 -4 1 -8 1 -12c0 -131 -100 -282 -282 -282c-56 0 -107 17 -151 45c8 -1 16 -2 24 -2c46 0 89 17 123 43c-43 1 -79 29 -92 68c6 -1 14 -1 20 -1c9 0 21 1 29 3c-45 9 -74 49 -74 97v1c0 -7 23 -11 39 -12c-27 18 -49 48 -49 82
+c0 18 5 35 13 50c49 -60 122 -99 204 -103c-2 7 -2 14 -2 22c0 55 43 99 98 99c28 0 55 -12 73 -31c22 4 43 13 62 24c-7 -23 -23 -43 -43 -55c20 2 39 8 57 16zM482 387z" />
+  </font>
+</defs></svg>

@@ -3,19 +3,54 @@
 @import "m__person--artist";
 @import "m__news";
 @import "m__tags";
+@import "m__player";
 
 /*--------------------*\
   site-logo
 \*--------------------*/
 
+.header {
+  background-image: url(../img/d-blok__logo--white.png);
+  background-repeat: no-repeat;
+  background-position: center 25px; // 10% of 250px
+  position: relative;
+  height: 250px;
+  background-size: auto 65%;
+
+}
+
+.social {
+  @extend %list-style-none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 25px; // 10% of 250px
+  text-align: center;
+  height: 16px;
+
+  li {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin: 0 ($horizontal-gutter / 2);
+    position: relative;
+  }
+
+  a {
+    @include hide(image-replacement);
+    display: block;
+    background-position-x: center;
+  }
+}
+
 .site-logo {
   height: 125px;
   color: $white;
-  white-space: nowrap;
   position: relative;
+/*   @include hide(image-replacement); */
 
   .site-name {
-    @include font-size(48);
+    @include font-size($h3);
     height: 50%;
     position: absolute;
     right: 0;
@@ -24,7 +59,7 @@
   }
 
   .tagline {
-    @include font-size(14);
+    @include font-size($small);
     display: block;
   }
 
@@ -44,5 +79,5 @@
 .site-copyright {
   @extend %zero;
   text-align: center;
-  @include font-size(14);
+  @include font-size($small);
 }

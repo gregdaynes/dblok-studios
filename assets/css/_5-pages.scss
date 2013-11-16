@@ -1,5 +1,45 @@
 // Pages
 // -----
+.about-page {
+  h2 {
+    padding: 0 ($horizontal-gutter / 2);
+  }
+
+  .artist__genres {
+    @include hide(hide-block);
+  }
+}
+
+.artists-page {
+  h2 {
+    padding: 0 ($horizontal-gutter / 2);
+  }
+}
+
+.artist-page {
+
+}
+
+.privacy-page,
+.terms-page {
+  h2,
+  h3 {
+    padding: 0 ($horizontal-gutter / 2);
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  dt {
+    padding: 0 ($horizontal-gutter / 2);
+  }
+
+  dd {
+    border-left: 3px solid $neutralcolor;
+    margin-left: $horizontal-gutter;
+    padding-left: $horizontal-gutter;
+  }
+}
+
 .executives { // list
 
 }
@@ -30,4 +70,19 @@
 
 .friends__friend { // individual
   margin-bottom: $vertical-gutter;
+}
+
+.tag-page {
+  h3 {
+    padding: 0 ($horizontal-gutter / 2);
+  }
+
+  .tagged-posts {
+    @extend %list-style-none;
+  }
+
+  .tagged-posts__post {
+    padding: 0 ($horizontal-gutter / 2);
+    margin: ($vertical-gutter / 2) 0;
+  }
 }

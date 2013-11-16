@@ -1,0 +1,9 @@
+// Header
+// ------
+.header {
+  @extend %box-sizing;
+
+  .site-logo {
+    @extend %hide-screen;
+  }
+}

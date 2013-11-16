@@ -21,6 +21,18 @@ $transitionSpeed: .3s;
 
 
 /*--------------------*\
+  Font Sizes
+\*--------------------*/
+$small: 0.667em;
+$h6   : 0.75em;
+$h5   : 0.83em;
+$base : 1em;
+$h4   : 1em;
+$h3   : 1.17em;
+$h2   : 1.75em;
+$h1   : 2em;
+
+/*--------------------*\
   Colors
 \*--------------------*/
 $primarycolor 					: #000; //#d35400;
@@ -34,7 +46,11 @@ $black 							    : #000;
 $white 							    : #fff;
 
 $textcolor              : #000;
-$fadedtextcolor         : darken($textcolor, 50%);
+$fadedtextcolor         : lighten($textcolor, 50%);
+
+$tapcolor               : #ff0000;
+$selectioncolor         : #ff0000;
+$inactiveselectioncolor : #ff0000;
 
 $linkcolor 		    			: $primarycolor;
 $linkcolorhover 				: $secondarycolor;
@@ -52,12 +68,10 @@ $lighterneutralcolor 		: #ff0000;
 $lightestneutralcolor 	: #ff0000;
 $midneutralcolor        : #ff0000;
 
-$homecolor:     #e74c3c;
-$aboutcolor:    #1abc9c;
-$artistscolor:  #34495e;
-$newscolor:     #9b59b6;
-$tagscolor:     #f1c40f;
-
-$artistcolor:   #2980b9;
-$newsitemcolor: #27ae60;
-$tagcolor:      #d35400;
+$homecolor:    #A0D468;
+$aboutcolor:   #FC6E51;
+$artistcolor:  #5D9CEC;
+$newscolor:    #656D78;
+$tagcolor:     #FFCE54;
+$privacycolor: #48CFAD;
+$termscolor:   #EC87C0;

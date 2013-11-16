@@ -3,19 +3,13 @@ layout: default
 body-class: artist-page
 ---
 
-<h3>{{ page.title }}</h3>
+<h3 class="artist__header">{{ page.title }}</h3>
 
-{{ page.location }}
+<span class="artist__location location">{{ page.location }}</span>
 
-<ul class="artist-genres">
-  {% for genre in page.genres %}
-    <li class="artist-genres__genre">
-      <a href="/tags/{{ genre }}">{{ genre }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% include fragment/genres-artist_genres.html %}
 
-<ul>
+<ul class="artist__social">
   {% if page.facebook %}
   <li>
     <a href="http://facebook.com/{{ page.facebook }}">Facebook</a>

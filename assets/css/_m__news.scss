@@ -31,25 +31,33 @@
 
 .news__recent-news__item {
   .news-item__title {
-    @include font-size(20);
+    @include font-size($base);
     color: $linkcolor;
   }
 }
 
+.section-header {
+  padding: ($vertical-gutter / 2) ($horizontal-gutter / 2);
+}
+
 .news-item {
   font-weight: 200;
+}
 
+
+.news__latest-news__header {
+  padding: ($vertical-gutter / 2) ($horizontal-gutter / 2);
 }
 
 .news__latest-news__header,
 .news__recent-news__header {
   color: $neutralcolor;
   border-bottom: 1px solid $neutralcolor;
-  @include font-size(14);
+  @include font-size($small);
 }
 
 .news-item__header {
-
+  padding: 0 ($horizontal-gutter / 2);
 
   a {
     color: $primarycolor;
@@ -57,7 +65,7 @@
     h1 {
       @extend %zero;
 
-      @include font-size(24);
+      @include font-size($h1);
     }
   }
 

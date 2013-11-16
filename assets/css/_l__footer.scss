@@ -1,0 +1,14 @@
+// Footer
+// ------
+.footer {
+  border-top: 1px solid $neutralcolor;
+  padding: ($vertical-gutter / 2) ($horizontal-gutter / 2);
+  @extend %box-sizing;
+  color: $fadedtextcolor;
+  margin-top: $vertical-gutter;
+
+  a {
+    color: $fadedtextcolor;
+  }
+}
+

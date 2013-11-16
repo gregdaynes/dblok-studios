@@ -1,9 +1,11 @@
-# Dev stuff
 markdown:  rdiscount
-# safe:      true
+safe:      true
 lsi:       false
 pygments:  true
-exclude: ['node_modules', 'Gruntfile.js', 'package.json']
+exclude: ['node_modules', 'Gruntfile.coffee', 'package.json', 'params.json', 'README.md', 'assets', 'tmp']
+
+destination: _build
+
 
 # Site stuff
 permalink: /:categories/:title
@@ -36,7 +38,16 @@ description:
 twitter:      dblokstudios
 twitter_card: summary
 
-
 title-delimiter: ' • '
 
 
+# Prefetch
+dns-prefetch:
+  - twitter.com
+  - facebook.com
+  - mailchimp.com
+
+#resource-prefetch:
+
+# x-domain
+xdomain: http://dblokstudios.com:8000/proxy.html

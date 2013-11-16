@@ -1,8 +1,10 @@
 <article class="news-item">
   <a href="{{item.url}}">
-    <h1 class="news-item__title">
-      {{item.title}}
-      <small class="news-item__date">{{item.date | date: "%B %d, %Y"}}</small>
-    </h1>
+    <header class="news-item__header">
+      <h1 class="news-item__title">
+        {{item.title}}
+        <small class="news-item__date">{{item.date | date: "%B %d, %Y"}}</small>
+      </h1>
+    </header>
   </a>
 </article>

@@ -3,23 +3,28 @@
 
 
 
-@mixin font-size($font-size: 16) {
+@mixin font-size($font-size: 16, $line-height: 1.6) {
   /*--------------------*\
     rem for browsers with support
     px for ones without
 
     @include font-size(integer)
+    // font-size: #{$font-size / 10}rem;
   \*--------------------*/
-  font-size: #{$font-size}px;
-  font-size: #{$font-size / 10}rem;
-/*   line-height: 1.6; */
+  font-size: #{$font-size};
+
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+
 }
 
 
 
 
 
-@mixin css-hyphens($val:auto) {
+@mixin hyphens($val:auto) {
   /*--------------------*\
     Malarky/Rock-Hammer
     how to go about splitting words to improve the layout of text when
@@ -73,6 +78,20 @@
       width: 0;
       height: 150%;
     }
+  }
+
+  @if $type == image-replacement
+  {
+    text-indent: 100%;
+  	white-space: nowrap;
+  	overflow: hidden;
+  }
+
+  @if $type == off-screen
+  {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
   }
 }
 

@@ -2,6 +2,7 @@
 title: Privacy Policy
 permalink: /privacy/index.html
 layout: default
+body-class: privacy-page
 ---
 
 This Privacy Policy governs the manner in which {{ site.name }} collects, uses, maintains and discloses information collected from users (each, a "User") of the <!-- $siteUrl --> website ("Site"). This privacy policy applies to the Site and all products and services offered by {{ site.name }}.

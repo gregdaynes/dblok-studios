@@ -1,0 +1,14 @@
+/*--------------------*\
+  Copyright Menu
+\*--------------------*/
+.copyright-menu {
+  text-align: center;
+
+  .copyright-menu__item {
+    display: inline-block;
+
+    a {
+      @include font-size($small);
+    }
+  }
+}

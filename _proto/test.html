@@ -1,0 +1,42 @@
+<!doctype>
+<html>
+<head>
+</head>
+<body>
+Hello World
+
+<script src="../assets/js/xdomain.js"
+      slave="http://dblokstudios.com:8000/proxy.html"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
+  <script type="text/javascript">
+    //show current origin
+    $("#host").html(xdomain.origin);
+
+    var getData = function() {
+      $.ajax({
+        dataType: "json",
+        url: 'http://dblokstudios.com:8000/json.xsl',
+        success: function(response) {
+          if (response.icestats.sources >= 1) {
+            console.log(response.icestats.source);
+          }
+        }
+      });
+    }
+
+    $.ajax({
+      dataType: "json",
+      url: 'http://dblokstudios.com:8000/status-check.json',
+      success: function(response) {
+        if (response.status == 200) {
+          getData();
+        }
+      }
+    });
+
+
+  </script>
+</body>
+</html>

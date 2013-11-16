@@ -1,0 +1,3 @@
+<ul class="artist__genres">
+  {% for genre in page.genres %}<li class="artist__genres__genre"><a class="tag" href="/tags/{{ genre }}">{{ genre }}</a></li>{% endfor %}
+</ul>

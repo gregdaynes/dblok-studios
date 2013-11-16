@@ -1,0 +1,61 @@
+.radio-player {
+
+}
+
+.radio-player__container {
+
+}
+
+.radio-player__title {
+
+}
+
+.radio-player__interface {
+
+}
+
+.radio-player__interface__volume-bar {
+  border: 1px solid black;
+  padding: 1px;
+  overflow: hidden;
+}
+
+.radio-player__interface__volume-bar-value {
+  background-color: $primarycolor;
+  border-right: 1px solid lighten($primarycolor, 50%);
+  height: 14px;
+}
+
+.radio-player__controls {
+
+}
+
+.radio-player__controls__play {
+
+}
+
+.radio-player__controls__pause {
+
+}
+
+.radio-player__controls__mute {
+
+}
+
+.radio-player__controls__unmute {
+
+}
+
+.radio-player__controls__volume-max {
+
+}
+
+.radio-player__streamlink {
+  @include font-size($small);
+  text-align: center;
+  color: $fadedtextcolor;
+}
+
+.radio-player__no-flash-fallback {
+
+}

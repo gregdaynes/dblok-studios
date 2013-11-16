@@ -1,22 +1,32 @@
 .tag-list {
   @extend %list-style-none;
-/*   @extend %grid; */
+  @extend %grid;
+  @extend %grid--full;
 }
 
 .tag-list__tag {
   display: inline-block;
   text-align: center;
+  padding: 0 ($horizontal-gutter / 2);
   margin-top: $vertical-gutter / 2;
 
+  @extend %grid__item;
+  @extend %bp1--one-third;
+  @extend %bp2--one-quarter;
+  @extend %bp4--one-fifth;
+  @extend %bp5--one-sixth;
+  @extend %bp6--one-eighth;
+
   a {
-    border: 1px solid $tagscolor;
-    padding: 2px 5px;
+    border: 1px solid $tagcolor;
     border-radius: 5px;
     margin: 0 $horizontal-gutter / 4;
-    background-color: lighten($tagscolor, 20%);
-    @include font-size(12);
+    background-color: lighten($tagcolor, 20%);
+    @include font-size($small);
     @extend %transition;
     text-transform: capitalize;
+    width: 100%;
+    display: block;
 
     &:hover {
       background-color: lighten(#f39c12, 20%);

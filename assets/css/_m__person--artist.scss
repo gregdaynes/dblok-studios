@@ -1,19 +1,52 @@
 // Artist-Specific
 // ---------------
-.artist-genres { // list
+
+.artist__header {
+  padding: 0 ($horizontal-gutter / 2);
+  margin-bottom: 0;
+}
+.artist__genres { // list
   @extend %list-style-none;
-  @include font-size(14);
+  @extend %grid;
+  @extend %grid--full;
+  padding: 0 ($horizontal-gutter / 2);
+
 }
 
-.artist-genres__genre { // individual
-  display: inline-block;
-  text-transform: lowercase;
+.artist__location { // span - town/city, state
   color: $fadedtextcolor;
-  background-color: lighten($tagscolor, 20%);
-  border: 1px solid $tagscolor;
-  padding: 2px 5px;
-  margin-bottom: $vertical-gutter / 4;
-  border-radius: 5px;
-  @include font-size(12);
+  @include font-size($small);
+  padding: 0 ($horizontal-gutter / 2);
+}
 
+.artist__genres__genre { // individual
+  display: inline-block;
+  text-align: center;
+  padding: 0 ($horizontal-gutter / 2);
+  margin-top: $vertical-gutter / 2;
+
+  @extend %grid__item;
+  @extend %bp1--one-third;
+  @extend %bp2--one-third;
+  @extend %bp3--one-half;
+  @extend %bp4--one-half;
+  @extend %bp5--one-half;
+  @extend %bp6--one-third;
+
+  .tag {
+    border: 1px solid $artistcolor;
+    border-radius: 5px;
+/*     margin: 0 $horizontal-gutter / 4; */
+    background-color: lighten($artistcolor, 20%);
+    @include font-size($small);
+    @extend %transition;
+    text-transform: capitalize;
+    width: 100%;
+    display: block;
+
+    &:hover {
+      background-color: darken($artistcolor, 10%);
+      border-color: darken($artistcolor, 20%);
+    }
+  }
 }

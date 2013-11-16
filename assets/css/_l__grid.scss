@@ -1,0 +1,47 @@
+/**********************\
+ Grids
+\**********************/
+.executives { // list
+  @extend %grid;
+}
+
+.executives__executive { // individual
+  @extend %grid__item;
+  @extend %bp3--one-third;
+}
+
+.executives__executive .artist-genres {
+  @extend %hide-screen;
+}
+
+.staff { // list
+  @extend %grid;
+}
+
+.staff__staff-member { // individual
+  @extend %grid__item;
+  @extend %bp3--one-third;
+  @extend %bp4--one-quarter;
+}
+
+.artists { // list
+  @extend %grid;
+}
+
+.artists__artist { // individual
+  @extend %grid__item;
+  @extend %bp2--one-half;
+  @extend %bp3--one-third;
+  @extend %bp5--one-quarter;
+}
+
+.friends { // list
+  @extend %grid;
+}
+
+.friends__friend { // individual
+  @extend %grid__item;
+  @extend %bp2--one-half;
+  @extend %bp3--one-third;
+  @extend %bp5--one-quarter;
+}

@@ -3,15 +3,11 @@
     <h3 class="name">
       {{ person.first-name}} "{{ person.title }}" {{person.last-name}}
     </h3>
-    
+
     <span class="location">{{ person.location }}</span>
-    
+
     {% if person.genres %}
-    <ul class="artist-genres">
-      {% for genre in person.genres limit:3 %}
-      <li class="artist-genres__genre">{{ genre }}</li>
-      {% endfor %}
-    </ul>
+      {% include fragment/genres-person_genres.html %}
     {% endif %}
   </div>
 </a>

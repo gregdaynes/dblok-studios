@@ -4,7 +4,6 @@
 html,
 body {
 	min-height: 100%;
-
 }
 
 /**
@@ -16,9 +15,7 @@ body {
 
 html {
 	overflow-y: scroll; /* 1 */
-	font-size: 62.5%; /* 10px */
 	font-family: sans-serif; /* 1 */
-  text-size-adjust: 100%; /* 2 */
 }
 
 /**
@@ -26,9 +23,7 @@ html {
  * 2. Unitless `line-height`, which acts as a multiple of the root `font-size`
  */
 body {
-  margin: 0;
-	@include font-size(16);
-	line-height: 1.6;
+  @extend %zero;
 }
 
 /*
@@ -38,13 +33,13 @@ body {
  */
 
 ::selection {
-    background: #b3d4fc;
+    background: $selectioncolor;
     text-shadow: none;
 }
 
 /* Change `background` for text selections when browser is unfocused */
 ::selection:window-inactive {
-	background: #d0d0d0;
+	background: $inactiveselectioncolor;
 }
 
 /* Remove `background` on images when selected */
@@ -54,7 +49,7 @@ img::selection {
 
 /* Define a mobile tap highlight color (iOS 1.1.1+) */
 a:link {
-	-webkit-tap-highlight-color: #b3d4fc;
+	-webkit-tap-highlight-color: $tapcolor;
 }
 
 
@@ -64,7 +59,7 @@ a:link {
  */
 img {
   vertical-align: middle;
-  width: 100%;
+  @extend %full-width;
   border: 0; /* 1 */
 }
 
@@ -91,7 +86,7 @@ textarea {
 
 /* Fluid-width <audio> elements */
 audio {
-	width: 100%;
+	@extend %full-width;
 }
 
 /* Fluid-width media that maintain their aspect ratios */
@@ -110,30 +105,10 @@ dfn[title] {
 	cursor: help;
 }
 
-abbr a {
-	text-decoration: none;
-}
-
-acronym {
-	text-transform: uppercase;
-}
-
 details {
 	cursor: pointer;
 }
 
-/* Nested `list-style` types for ordered lists */
-ol          { list-style: decimal; }
-ol ol       { list-style: upper-alpha; }
-ol ol ol    { list-style: lower-roman; }
-ol ol ol ol { list-style: lower-alpha; }
-
-
-p,
-table,
-textarea,
-td,
-th {
-	@include css-hyphens(auto);
-	word-wrap: break-word;
+abbr a {
+	text-decoration: none;
 }
